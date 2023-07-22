@@ -1,10 +1,14 @@
 {
-    "name": "allinone/all-in-one-accessibility",
+    "name": "skynettechnologies/typo3-allinoneaccessibility",
     "type": "typo3-cms-extension",
-    "description": "Allow customers to contact you using Viber",
-    "homepage": "https://smartarget.online",
+	"description": "Allow customers to contact you using Viber",
+    "homepage": "https://www.skynettechnologies.com",
     "license": ["GPL-2.0-or-later"],
     "keywords": ["TYPO3 CMS All in one accessibility"],
+	"require": {
+		"php": "^7.4 || ^8.0",
+		"typo3/cms-core": "^8.7 || ^9.5 || ^10.4 || ^11.5",
+	},
     "autoload": {
         "psr-4": {
             "Allinone\\Allinoneaccessibility\\": "Classes/"
