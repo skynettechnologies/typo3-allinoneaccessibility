@@ -1,0 +1,31 @@
+############################
+### CUSTOM SUBCATEGORIES ###
+###########################
+# customsubcategory=chat=LLL:EXT:allinone_accessibility/Resources/Private/Language/locallang.xlf:cat_chat
+# customsubcategory=share=LLL:EXT:allinone_accessibility/Resources/Private/Language/locallang.xlf:cat_share
+# customsubcategory=group=LLL:EXT:allinone_accessibility/Resources/Private/Language/locallang.xlf:cat_group
+# customsubcategory=style=LLL:EXT:allinone_accessibility/Resources/Private/Language/locallang.xlf:cat_style
+
+plugin.tx_alloneaccessibility_tool {
+  view {
+    # cat=plugin.tx_alloneaccessibility_tool/file; type=string; label=Path to template root (FE)
+    templateRootPath = EXT:allone_accessibility/Resources/Private/Templates/
+    # cat=plugin.tx_alloneaccessibility_tool/file; type=string; label=Path to template partials (FE)
+    partialRootPath = EXT:allone_accessibility/Resources/Private/Partials/
+    # cat=plugin.tx_alloneaccessibility_tool/file; type=string; label=Path to template layouts (FE)
+    layoutRootPath = EXT:allone_accessibility/Resources/Private/Layouts/
+  }
+  
+}
+
+module.tx_allinoneaccessibility_Sntg_allinoneaccessibilitytoolmodule {
+  view {
+    # cat=module.tx_nswhasapp_whastappmodule/file; type=string; label=Path to template root (BE)
+    templateRootPath = EXT:allinone_accessibility/Resources/Private/Backend/Templates/
+    # cat=module.tx_nswhasapp_whastappmodule/file; type=string; label=Path to template partials (BE)
+    partialRootPath = EXT:allinone_accessibility/Resources/Private/Backend/Partials/
+    # cat=module.tx_nswhasapp_whastappmodule/file; type=string; label=Path to template layouts (BE)
+    layoutRootPath = EXT:allinone_accessibility/Resources/Private/Backend/Layouts/
+  }
+
+}

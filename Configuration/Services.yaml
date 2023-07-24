@@ -1,0 +1,22 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Sntg\AllinoneAccessibility\:
+    resource: '../Classes/*'
+
+  Sntg\AllinoneAccessibility\Property\TypeConverter\UploadedFileReferenceConverter:
+    tags:
+      - name: extbase.type_converter
+        priority: 32
+        target: TYPO3\CMS\Extbase\Domain\Model\FileReference
+        sources: array
+
+  Sntg\AllinoneAccessibility\Property\TypeConverter\ObjectStorageConverter:
+    tags:
+      - name: extbase.type_converter
+        priority: 22
+        target: TYPO3\CMS\Extbase\Persistence\ObjectStorage
+        sources: array      

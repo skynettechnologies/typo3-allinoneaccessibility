@@ -1,43 +1,36 @@
 <?php
-defined('TYPO3_MODE') || die();
-
-/***************
- * Add default RTE configuration
- */
-$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['allinoneaccessibility'] = 'EXT:allinoneaccessibility/Configuration/RTE/Default.yaml';
-
-
-
-$signalSlotDispatcher = TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
-$signalSlotDispatcher->connect(
-        \TYPO3\CMS\Extensionmanager\Utility\InstallUtility::class,  // Signal class name
-        'afterExtensionUninstall',
-        \Allinone\Allinoneaccessibility\Hooks\AppMethods::class,
-        'removeApp'
-);
-
-$signalSlotDispatcher->connect(
-        \TYPO3\CMS\Extensionmanager\Utility\InstallUtility::class,  // Signal class name
-        'afterExtensionInstall',
-        \Allinone\Allinoneaccessibility\Hooks\AppMethods::class,
-        'addApp'
-);
+defined('TYPO3') || die('Access denied.');
 
 call_user_func(
-    function()
-    {
-
+    function () {
+        
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Allinone.Allinoneaccessibility',
-            'Ajaxmap',
+            'AllinoneAccessibility',
+            'Tool',
             [
-                \Allinone\Allinoneaccessibility\Controller\PostController::class => 'main'
+                \Sntg\AllinoneAccessibility\Controller\ToolController::class => 'main',
             ],
             // non-cacheable actions
             [
-                \Allinone\Allinoneaccessibility\Controller\PostController::class => 'main'
+                \Sntg\AllinoneAccessibility\Controller\ToolController::class => 'main',
             ]
         );
 
+        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+
+        $iconRegistry->registerIcon(
+            'ns_whatsapp-plugin-whatsapp',
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            ['source' => 'EXT:allinone_accessibility/Resources/Public/Icons/user_plugin_whatsapp.svg']
+        );
+
+        $iconRegistry->registerIcon(
+            'module-allinoneaccessibility',
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            ['source' => 'EXT:allinone_accessibility/Resources/Public/Icons/module-sntg.svg']
+        );
+
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['features']['security.backend.enforceContentSecurityPolicy'] = false;
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['features']['security.frontend.enforceContentSecurityPolicy'] = false;    
     }
 );

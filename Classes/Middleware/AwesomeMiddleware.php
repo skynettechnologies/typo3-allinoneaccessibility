@@ -1,5 +1,5 @@
 <?php
-namespace Allinone\Allinoneaccessibility\Middleware;
+namespace Sntg\AllinoneAccessibility\Middleware;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -18,11 +18,9 @@ class AwesomeMiddleware implements MiddlewareInterface
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         $response = $handler->handle($request);
-        $domain = $_SERVER['HTTP_HOST'];
+        $domain = $_SERVER['SERVER_NAME'];
         $projectName = end(explode("/",(Environment::getProjectPath())));
-        //$hash = sha1(sha1("typo3_viber_" . preg_replace("/www\.|https?:\/\/|\/$|\/?\?.+|\/.+|^\./", '', $domain)) . "_script");
-        //$script = '<script type="text/javascript" src="https://smartarget.online/loader.js?u=' . $hash . '&source=typo3_viber"></script>';
-        $url = 'http://localhost/typo3/api.php';
+        $url = 'http://localhost/typo3-iframe/api.php';
         $hash = sha1($projectName."typo3_accessibility_". preg_replace("/www\.|https?:\/\/|\/$|\/?\?.+|\/.+|^\./", '', $domain));
         $post_data = [
             'hash_val' => $hash,
@@ -38,6 +36,7 @@ class AwesomeMiddleware implements MiddlewareInterface
           $result = file_get_contents($url, false, $context);
           $getData = json_decode($result, true);
         /* ---- All in One accessibility script */
+        $script = "";
         $script .= "<script id='aioa-adawidget' src='https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=".$getData['color']."&token=".$getData['licensekey']."&position=".$getData['position'].".".$getData['icon_type'].".".$getData['icon_size']."' async='true'></script>";
 		$html = $response->getBody();
         $html = str_replace("</body>","$script</body>",$html);
