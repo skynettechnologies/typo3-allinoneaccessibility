@@ -22,7 +22,7 @@ class AwesomeMiddleware implements MiddlewareInterface
         $projectName = end(explode("/",(Environment::getProjectPath())));
         //$hash = sha1(sha1("typo3_viber_" . preg_replace("/www\.|https?:\/\/|\/$|\/?\?.+|\/.+|^\./", '', $domain)) . "_script");
         //$script = '<script type="text/javascript" src="https://smartarget.online/loader.js?u=' . $hash . '&source=typo3_viber"></script>';
-        $url = 'http://localhost/typo3/api.php';
+        $url = 'https://skynettechnologies.com/add-ons/reports/setup/typo3/api.php';
         $hash = sha1($projectName."typo3_accessibility_". preg_replace("/www\.|https?:\/\/|\/$|\/?\?.+|\/.+|^\./", '', $domain));
         $post_data = [
             'hash_val' => $hash,
