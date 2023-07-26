@@ -20,7 +20,7 @@ class AwesomeMiddleware implements MiddlewareInterface
         $response = $handler->handle($request);
         $domain = $_SERVER['SERVER_NAME'];
         $projectName = end(explode("/",(Environment::getProjectPath())));
-        $url = 'http://localhost/typo3-iframe/api.php';
+        $url = 'https://skynettechnologies.com/add-ons/reports/setup/typo3/api.php';
         $hash = sha1($projectName."typo3_accessibility_". preg_replace("/www\.|https?:\/\/|\/$|\/?\?.+|\/.+|^\./", '', $domain));
         $post_data = [
             'hash_val' => $hash,
