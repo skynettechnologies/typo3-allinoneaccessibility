@@ -1,8 +1,8 @@
 <?php
-namespace Sntg\AllinoneAccessibility\Controller;
+namespace Skynettechnologies\Typo3Allinoneaccessibility\Controller;
 
-use Sntg\AllinoneAccessibility\NsConstantModule\TypoScriptTemplateConstantEditorModuleFunctionController;
-use Sntg\AllinoneAccessibility\Property\TypeConverter\UploadedFileReferenceConverter;
+use Skynettechnologies\Typo3Allinoneaccessibility\AdaConstantModule\TypoScriptTemplateConstantEditorModuleFunctionController;
+use Skynettechnologies\Typo3Allinoneaccessibility\Property\TypeConverter\UploadedFileReferenceConverter;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Property\PropertyMappingConfiguration;
 use TYPO3\CMS\Tstemplate\Controller\TypoScriptTemplateModuleController;
@@ -28,12 +28,12 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     /**
      * toolstyleRepository
      *
-     * @var \Sntg\AllinoneAccessibility\Domain\Repository\ToolRepository
+     * @var \Skynettechnologies\Typo3Allinoneaccessibility\Domain\Repository\ToolRepository
      */
     protected $toolstyleRepository = null;
 
     public function __construct(
-        \Sntg\AllinoneAccessibility\Domain\Repository\ToolstyleRepository $toolstyleRepository
+        \Skynettechnologies\Typo3Allinoneaccessibility\Domain\Repository\ToolstyleRepository $toolstyleRepository
     ) {
         $this->toolstyleRepository = $toolstyleRepository;
     }
@@ -94,13 +94,14 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     {
         $this->view->assign('action', 'chatSettings');
         $this->view->assign('constant', $this->constants);
-        $domain = $_SERVER['SERVER_NAME'];
+        $host = GeneralUtility::locationHeaderUrl( '/' );
+        $domain = parse_url($host, PHP_URL_HOST);
         
         $projectName = end(explode("/",(Environment::getProjectPath())));
         $hash = sha1($projectName."typo3_accessibility_" . preg_replace("/www\.|https?:\/\/|\/$|\/?\?.+|\/.+|^\./", '', $domain));
         $this->view->assign('hash', $hash);
         $this->view->assign('domain', $domain);
-        //print_r($this->constants);die;
+        
         return $this->htmlResponse();
     }
 }

@@ -1150,15 +1150,15 @@ select.form-control[size="1"]:not(.form-select-no-siblings) {
     }
 }
 
-.ns-whatsapp-style input[type="text"]{
+.ada-widget-style input[type="text"]{
     padding: 10px;
     min-width: 120px;
 }
-.ns-whatsapp-style input[type="number"]{
+.ada-widget-style input[type="number"]{
     padding: 10px;
     min-width: 120px;
 }
-.ns-whatsapp-style input[type="color"]{
+.ada-widget-style input[type="color"]{
     padding: 5px;
     min-width: 120px;
     height: 45px;

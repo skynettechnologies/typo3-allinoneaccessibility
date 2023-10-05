@@ -1,9 +1,9 @@
 <?php
-namespace Sntg\AllinoneAccessibility\Domain\Model;
+namespace Skynettechnologies\Typo3Allinoneaccessibility\Domain\Model;
 
 /***
  *
- * This file is part of the "AllinoneAccessibility" Extension for TYPO3 CMS.
+ * This file is part of the "Typo3Allinoneaccessibility" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.

@@ -1,5 +1,5 @@
 <?php
-namespace Sntg\AllinoneAccessibility\Domain\Repository;
+namespace Skynettechnologies\Typo3Allinoneaccessibility\Domain\Repository;
 
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;

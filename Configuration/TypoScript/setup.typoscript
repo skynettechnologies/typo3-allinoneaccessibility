@@ -1,12 +1,12 @@
 plugin {
-  tx_alloneaccessibility_tool {
+  tx_typo3alloneaccessibility_tool {
     view {
-      templateRootPaths.0 = EXT:allone_accessibility/Resources/Private/Templates/
-      //templateRootPaths.1 = {$plugin.tx_alloneaccessibility_tool.view.templateRootPath}
-      partialRootPaths.0 = EXT:allone_accessibility/Resources/Private/Partials/
-      //partialRootPaths.1 = {$plugin.tx_alloneaccessibility_tool.view.partialRootPath}
-      layoutRootPaths.0 = EXT:allone_accessibility/Resources/Private/Layouts/
-      //layoutRootPaths.1 = {$plugin.tx_alloneaccessibility_tool.view.layoutRootPath}
+      templateRootPaths.0 = EXT:typo3_alloneaccessibility/Resources/Private/Templates/
+      //templateRootPaths.1 = {$plugin.tx_typo3alloneaccessibility_tool.view.templateRootPath}
+      partialRootPaths.0 = EXT:typo3_alloneaccessibility/Resources/Private/Partials/
+      //partialRootPaths.1 = {$plugin.tx_typo3alloneaccessibility_tool.view.partialRootPath}
+      layoutRootPaths.0 = EXT:typo3_alloneaccessibility/Resources/Private/Layouts/
+      //layoutRootPaths.1 = {$plugin.tx_typo3alloneaccessibility_tool.view.layoutRootPath}
     }
 
     features {
@@ -23,27 +23,21 @@ plugin {
 }
 
 # Module configuration
-module.tx_allinoneaccessibility_Sntg_allinoneaccessibilitytoolmodule {
+module.tx_typo3allinoneaccessibility_Sntg_typo3allinoneaccessibilitytoolmodule {
   view {
-    templateRootPaths.0 = EXT:allinone_accessibility/Resources/Private/Backend/Templates/
-    //templateRootPaths.1 = {$module.tx_nstool_toolmodule.view.templateRootPath}
-    partialRootPaths.0 = EXT:allinone_accessibility/Resources/Private/Backend/Partials/
-    //partialRootPaths.1 = {$module.tx_nstool_toolmodule.view.partialRootPath}
-    layoutRootPaths.0 = EXT:allinone_accessibility/Resources/Private/Backend/Layouts/
-    //layoutRootPaths.1 = {$module.tx_nstool_Toolmodule.view.layoutRootPath}
+    templateRootPaths.0 = EXT:typo3_allinoneaccessibility/Resources/Private/Backend/Templates/
+    partialRootPaths.0 = EXT:typo3_allinoneaccessibility/Resources/Private/Backend/Partials/
+    layoutRootPaths.0 = EXT:typo3_allinoneaccessibility/Resources/Private/Backend/Layouts/
   }
 }
 
 page {
   // Initiate all the css-together
   includeCSS {
-    30001 =  EXT:allinone_accessibility/Resources/Public/Css/nswhatsapp.css
+    30001 =  EXT:typo3_allinoneaccessibility/Resources/Public/Css/adawidget.css
   }
 
-  // Initiate all the js-together
-  includeJSFooter {
-    9902 = EXT:allinone_accessibility/Resources/Public/JavaScript/nswhatsapp.js
-  }
+  
 
 }
 page.111246 >
@@ -51,14 +45,14 @@ page.111246 = USER
 page.111246 {
   userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
   pluginName = Tool
-  extensionName = AllinoneAccessibility
+  extensionName = Typo3Allinoneaccessibility
   controller = Tool
-  vendorName = Sntg
+  vendorName = Skynettechnologies
   action = main
   switchableControllerActions{
     Tool {
       1 = main
     }
   }
-  settings < plugin.tx_alloneaccessibility_tool.settings
+  settings < plugin.tx_typo3alloneaccessibility_tool.settings
 }

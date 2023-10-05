@@ -7,11 +7,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Sntg\\AllinoneAccessibility\\": "Classes"
+            "Skynettechnologies\\Typo3Allinoneaccessibility\\": "Classes"
         }
     },
     "replace": {
-        "typo3-ter/allinone-accessibility": "self.version"
+        "typo3-ter/typo3-allinoneaccessibility": "*"
     },
     "config": {
         "vendor-dir": ".Build/vendor/",
@@ -21,7 +21,7 @@
         "typo3/cms": {
             "cms-package-dir": "{$vendor-dir}/typo3/cms",
             "web-dir": ".Build/public",
-            "extension-key": "allinone_accessibility"
+            "extension-key": "typo3_allinoneaccessibility"
         }
     }
 }

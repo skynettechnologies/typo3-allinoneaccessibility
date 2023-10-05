@@ -1,5 +1,5 @@
 <?php
-namespace Sntg\AllinoneAccessibility\Property\TypeConverter;
+namespace Skynettechnologies\Typo3Allinoneaccessibility\Property\TypeConverter;
 
 use TYPO3\CMS\Core\Resource\Exception\ExistingTargetFileNameException;
 use TYPO3\CMS\Core\Resource\File as FalFile;
@@ -150,7 +150,7 @@ class UploadedFileReferenceConverter extends AbstractTypeConverter
             throw new TypeConverterException('Uploading files with PHP file extensions is not allowed!', 1399312430);
         }
 
-        $allowedFileExtensions = $configuration->getConfigurationValue('Sntg\\AllinoneAccessibility\\ Property\\TypeConverter\\UploadedFileReferenceConverter', self::CONFIGURATION_ALLOWED_FILE_EXTENSIONS);
+        $allowedFileExtensions = $configuration->getConfigurationValue('Skynettechnologies\\Typo3Allinoneaccessibility\\ Property\\TypeConverter\\UploadedFileReferenceConverter', self::CONFIGURATION_ALLOWED_FILE_EXTENSIONS);
 
         if ($allowedFileExtensions !== null) {
             $filePathInfo = PathUtility::pathinfo($uploadInfo['name']);
@@ -159,14 +159,14 @@ class UploadedFileReferenceConverter extends AbstractTypeConverter
             }
         }
 
-        $uploadFolderId = $configuration->getConfigurationValue('Sntg\\AllinoneAccessibility\\ Property\\TypeConverter\\UploadedFileReferenceConverter', self::CONFIGURATION_UPLOAD_FOLDER) ?: $this->defaultUploadFolder;
+        $uploadFolderId = $configuration->getConfigurationValue('Skynettechnologies\\Typo3Allinoneaccessibility\\ Property\\TypeConverter\\UploadedFileReferenceConverter', self::CONFIGURATION_UPLOAD_FOLDER) ?: $this->defaultUploadFolder;
         if (class_exists('TYPO3\\CMS\\Core\\Resource\\DuplicationBehavior')) {
             $defaultConflictMode = \TYPO3\CMS\Core\Resource\DuplicationBehavior::RENAME;
         } else {
             // @deprecated since 7.6 will be removed once 6.2 support is removed
             $defaultConflictMode = 'changeName';
         }
-        $conflictMode = $configuration->getConfigurationValue('Sntg\\AllinoneAccessibility\\ Property\\TypeConverter\\UploadedFileReferenceConverter', self::CONFIGURATION_UPLOAD_CONFLICT_MODE) ?: $defaultConflictMode;
+        $conflictMode = $configuration->getConfigurationValue('Skynettechnologies\\Typo3Allinoneaccessibility\\ Property\\TypeConverter\\UploadedFileReferenceConverter', self::CONFIGURATION_UPLOAD_CONFLICT_MODE) ?: $defaultConflictMode;
         $this->resourceFactory = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Resource\ResourceFactory::class);
         $uploadFolder = $this->resourceFactory->retrieveFileOrFolderObject($uploadFolderId);
 
@@ -184,7 +184,7 @@ class UploadedFileReferenceConverter extends AbstractTypeConverter
     /**
      * @param FalFile $file
      * @param int $resourcePointer
-     * @return \Sntg\AllinoneAccessibility\Domain\Model\FileReference
+     * @return \Skynettechnologies\Typo3Allinoneaccessibility\Domain\Model\FileReference
      */
     protected function createFileReferenceFromFalFileObject(FalFile $file, $resourcePointer = null)
     {
@@ -203,12 +203,12 @@ class UploadedFileReferenceConverter extends AbstractTypeConverter
     /**
      * @param FalFileReference $falFileReference
      * @param int $resourcePointer
-     * @return \Sntg\AllinoneAccessibility\Domain\Model\FileReference
+     * @return \Skynettechnologies\Typo3Allinoneaccessibility\Domain\Model\FileReference
      */
     protected function createFileReferenceFromFalFileReferenceObject(FalFileReference $falFileReference, $resourcePointer = null)
     {
         if ($resourcePointer === null) {
-            /** @var $fileReference \Sntg\AllinoneAccessibility\Domain\Model\FileReference */
+            /** @var $fileReference \Skynettechnologies\Typo3Allinoneaccessibility\Domain\Model\FileReference */
             $fileReference = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Domain\\Model\\FileReference');
         } else {
             $fileReference = $this->persistenceManager->getObjectByIdentifier($resourcePointer, 'TYPO3\\CMS\\Extbase\\Domain\\Model\\FileReference', false);

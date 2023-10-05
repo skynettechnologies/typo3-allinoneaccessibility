@@ -2,23 +2,23 @@
 
 return [
     'Sntg_module' => [
-        'labels' => 'LLL:EXT:allinone_accessibility/Resources/Private/Language/BackendModule.xlf',
-        'icon' => 'EXT:allinone_accessibility/Resources/Public/Icons/module-allinoneaccessibility.svg',
-        'iconIdentifier' => 'module-allinoneaccessibility',
+        'labels' => 'LLL:EXT:typo3_allinoneaccessibility/Resources/Private/Language/BackendModule.xlf',
+        'icon' => 'EXT:typo3_allinoneaccessibility/Resources/Public/Icons/module-typo3allinoneaccessibility.svg',
+        'iconIdentifier' => 'module-typo3allinoneaccessibility',
         'navigationComponent' => '@typo3/backend/page-tree/page-tree-element',
         'position' => ['after' => 'web'],
     ],
-    'Sntg_AllinoneAccessibilityToolmodule' => [
+    'Sntg_Typo3AllinoneaccessibilityToolmodule' => [
         'parent' => 'Sntg_module',
         'position' => ['before' => 'top'],
         'access' => 'admin,user,group',
-        'path' => '/module/Sntg/AllinoneAccessibilityToolmodule',
-        'icon'   => 'EXT:allinone_accessibility/Resources/Public/Icons/whats_app.svg',
-        'labels' => 'LLL:EXT:allinone_accessibility/Resources/Private/Language/locallang_whastappmodule.xlf',
+        'path' => '/module/Skynettechnologies/Typo3AllinoneaccessibilityToolmodule',
+        'icon'   => 'EXT:typo3_allinoneaccessibility/Resources/Public/Icons/whats_app.svg',
+        'labels' => 'LLL:EXT:typo3_allinoneaccessibility/Resources/Private/Language/locallang_whastappmodule.xlf',
         'navigationComponent' => '@typo3/backend/page-tree/page-tree-element',
-        'extensionName' => 'AllinoneAccessibility',
+        'extensionName' => 'Typo3Allinoneaccessibility',
         'controllerActions' => [
-            \Sntg\AllinoneAccessibility\Controller\ToolController::class => [
+            \Skynettechnologies\Typo3Allinoneaccessibility\Controller\ToolController::class => [
                 'chatSettings', 
             ],
         ],

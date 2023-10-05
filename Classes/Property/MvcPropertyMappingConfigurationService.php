@@ -1,7 +1,7 @@
 <?php
-namespace Sntg\AllinoneAccessibility\Property;
+namespace Skynettechnologies\Typo3Allinoneaccessibility\Property;
 
-use Sntg\AllinoneAccessibility\Utility\ArrayUtility as NitsanArrayUtility;
+use Skynettechnologies\Typo3Allinoneaccessibility\Utility\ArrayUtility as SntgArrayUtility;
 use TYPO3\CMS\Core\Utility\ArrayUtility as ExtbaseArrayUtility;
 
 /**
@@ -65,7 +65,7 @@ class MvcPropertyMappingConfigurationService extends \TYPO3\CMS\Extbase\Mvc\Cont
             if (is_array($propertyConfiguration)) {
                 $prepareConfigurationTemplate = [];
 
-                foreach (NitsanArrayUtility::getPathsToKey($propertyConfiguration, '*') as $path) {
+                foreach (SntgArrayUtility::getPathsToKey($propertyConfiguration, '*') as $path) {
                     $configurationTemplate = ExtbaseArrayUtility::getValueByPath($propertyConfiguration, $path . '.*', '.*');
                     $propertyConfiguration = ExtbaseArrayUtility::removeByPath($propertyConfiguration, $path . '.*', '.*');
 

@@ -5,14 +5,14 @@ call_user_func(
     function () {
         
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'AllinoneAccessibility',
+            'Typo3Allinoneaccessibility',
             'Tool',
             [
-                \Sntg\AllinoneAccessibility\Controller\ToolController::class => 'main',
+                \Skynettechnologies\Typo3Allinoneaccessibility\Controller\ToolController::class => 'main',
             ],
             // non-cacheable actions
             [
-                \Sntg\AllinoneAccessibility\Controller\ToolController::class => 'main',
+                \Skynettechnologies\Typo3Allinoneaccessibility\Controller\ToolController::class => 'main',
             ]
         );
 
@@ -21,13 +21,13 @@ call_user_func(
         $iconRegistry->registerIcon(
             'ns_whatsapp-plugin-whatsapp',
             \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-            ['source' => 'EXT:allinone_accessibility/Resources/Public/Icons/user_plugin_whatsapp.svg']
+            ['source' => 'EXT:typo3_allinoneaccessibility/Resources/Public/Icons/user_plugin_whatsapp.svg']
         );
 
         $iconRegistry->registerIcon(
-            'module-allinoneaccessibility',
+            'module-typo3allinoneaccessibility',
             \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-            ['source' => 'EXT:allinone_accessibility/Resources/Public/Icons/module-sntg.svg']
+            ['source' => 'EXT:typo3_allinoneaccessibility/Resources/Public/Icons/module-sntg.svg']
         );
 
         $GLOBALS['TYPO3_CONF_VARS']['SYS']['features']['security.backend.enforceContentSecurityPolicy'] = false;
