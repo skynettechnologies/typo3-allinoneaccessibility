@@ -1,0 +1,22 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Skynettechnologies\Typo3Allinoneaccessibility\:
+    resource: '../Classes/*'
+
+  Skynettechnologies\Typo3Allinoneaccessibility\Property\TypeConverter\UploadedFileReferenceConverter:
+    tags:
+      - name: extbase.type_converter
+        priority: 32
+        target: TYPO3\CMS\Extbase\Domain\Model\FileReference
+        sources: array
+
+  Skynettechnologies\Typo3Allinoneaccessibility\Property\TypeConverter\ObjectStorageConverter:
+    tags:
+      - name: extbase.type_converter
+        priority: 22
+        target: TYPO3\CMS\Extbase\Persistence\ObjectStorage
+        sources: array      
