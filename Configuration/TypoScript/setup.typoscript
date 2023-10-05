@@ -1,0 +1,55 @@
+plugin {
+  tx_typo3allinaccessibility_tool {
+    view {
+      templateRootPaths.0 = EXT:typo3_allinaccessibility/Resources/Private/Templates/
+      partialRootPaths.0 = EXT:typo3_allinaccessibility/Resources/Private/Partials/
+      layoutRootPaths.0 = EXT:typo3_allinaccessibility/Resources/Private/Layouts/
+    }
+
+    features {
+      #skipDefaultArguments = 1
+      # if set to 1, the enable fields are ignored in BE context
+      ignoreAllEnableFieldsInBe = 0
+      # Should be on by default, but can be disabled if all action in the plugin are uncached
+      requireCHashArgumentForActionArguments = 1
+    }
+    mvc {
+      #callDefaultActionIfActionCantBeResolved = 1
+    }
+  }
+}
+
+# Module configuration
+module.tx_typo3allinoneaccessibility_skynettechnologies_typo3allinoneaccessibilitytoolmodule {
+  view {
+    templateRootPaths.0 = EXT:typo3_allinoneaccessibility/Resources/Private/Backend/Templates/
+    partialRootPaths.0 = EXT:typo3_allinoneaccessibility/Resources/Private/Backend/Partials/
+    layoutRootPaths.0 = EXT:typo3_allinoneaccessibility/Resources/Private/Backend/Layouts/
+  }
+}
+
+
+page {
+  // Initiate all the css-together
+  includeCSS {
+    30001 = typo3conf/ext/typo3_allinoneaccessibility/Resources/Public/Css/adawidget.css
+  }
+
+
+}
+page.111246 >
+page.111246 = USER
+page.111246 {
+  userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+  pluginName = Tool
+  extensionName = Typo3Allinoneaccessibility
+  controller = Tool
+  vendorName = Skynettechnologies
+  action = list
+  switchableControllerActions{
+    Tool {
+      1 = list
+    }
+  }
+  settings < plugin.tx_typo3allinaccessibility_Tool.settings
+}

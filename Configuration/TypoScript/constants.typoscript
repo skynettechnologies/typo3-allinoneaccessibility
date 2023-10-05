@@ -1,0 +1,16 @@
+plugin.tx_typo3allinaccessibility_tool {
+  view {
+    templateRootPath = EXT:typo3_allinaccessibility/Resources/Private/Templates/
+    partialRootPath = EXT:typo3_allinaccessibility/Resources/Private/Partials/
+    layoutRootPath = EXT:typo3_allinaccessibility/Resources/Private/Layouts/
+  }
+}
+
+module.tx_typo3allinaccessibility_toolmodule {
+  view {
+    templateRootPath = EXT:typo3_allinaccessibility/Resources/Private/Backend/Templates/
+    partialRootPath = EXT:typo3_allinaccessibility/Resources/Private/Backend/Partials/
+    layoutRootPath = EXT:typo3_allinaccessibility/Resources/Private/Backend/Layouts/
+  }
+
+}

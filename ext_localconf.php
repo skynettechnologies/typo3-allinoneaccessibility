@@ -1,43 +1,40 @@
 <?php
-defined('TYPO3_MODE') || die();
-
-/***************
- * Add default RTE configuration
- */
-$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['allinoneaccessibility'] = 'EXT:allinoneaccessibility/Configuration/RTE/Default.yaml';
-
-
-
-$signalSlotDispatcher = TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
-$signalSlotDispatcher->connect(
-        \TYPO3\CMS\Extensionmanager\Utility\InstallUtility::class,  // Signal class name
-        'afterExtensionUninstall',
-        \Allinone\Allinoneaccessibility\Hooks\AppMethods::class,
-        'removeApp'
-);
-
-$signalSlotDispatcher->connect(
-        \TYPO3\CMS\Extensionmanager\Utility\InstallUtility::class,  // Signal class name
-        'afterExtensionInstall',
-        \Allinone\Allinoneaccessibility\Hooks\AppMethods::class,
-        'addApp'
-);
+defined('TYPO3_MODE') || die('Access denied.');
 
 call_user_func(
-    function()
-    {
-
+    function () {
+        if (version_compare(TYPO3_branch, '10.0', '>=')) {
+            $moduleClass = \Skynettechnologies\Typo3Allinoneaccessibility\Controller\ToolController::class;
+        } else {
+            $moduleClass = 'Tool';
+        }
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Allinone.Allinoneaccessibility',
-            'Ajaxmap',
+            'Skynettechnologies.Typo3Allinoneaccessibility',
+            'Tool',
             [
-                \Allinone\Allinoneaccessibility\Controller\PostController::class => 'main'
+                $moduleClass => 'list, update, create',
             ],
             // non-cacheable actions
             [
-                \Allinone\Allinoneaccessibility\Controller\PostController::class => 'main'
+                $moduleClass => 'update, create',
             ]
         );
 
+        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+
+        $iconRegistry->registerIcon(
+            'typo3_allinoneaccessibility-plugin-tool',
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            ['source' => 'EXT:typo3_allinoneaccessibility/Resources/Public/Icons/user_plugin_whatsapp.svg']
+        );
+
+        $iconRegistry->registerIcon(
+            'module-typo3allinoneaccessibility',
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            ['source' => 'EXT:typo3_allinoneaccessibility/Resources/Public/Icons/module-sntg.svg']
+        );
     }
 );
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerTypeConverter('Skynettechnologies\\Typo3Allinoneaccessibility\\Property\\TypeConverter\\UploadedFileReferenceConverter');
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerTypeConverter('Skynettechnologies\\Typo3Allinoneaccessibility\\Property\\TypeConverter\\ObjectStorageConverter');
