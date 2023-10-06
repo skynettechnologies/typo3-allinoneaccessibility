@@ -7,6 +7,6 @@ return [
     'imports' => [
         // recursive definiton, all *.js files in this folder are import-mapped
         // trailing slash is required per importmap-specification
-        '@Skynettechnologies/typo3-allinoneaccessibility/' => 'EXT:typo3_allinoneaccessibility/Resources/Public/JavaScript/',
+        '@Skynettechnologies/allinoneaccessibility/' => 'EXT:allinoneaccessibility/Resources/Public/JavaScript/',
     ],
 ];

@@ -1,23 +1,20 @@
 plugin.tx_typo3alloneaccessibility_tool {
   view {
     # cat=plugin.tx_typo3alloneaccessibility_tool/file; type=string; label=Path to template root (FE)
-    templateRootPath = EXT:typo3_alloneaccessibility/Resources/Private/Templates/
+    templateRootPath = EXT:alloneaccessibility/Resources/Private/Templates/
     # cat=plugin.tx_typo3alloneaccessibility_tool/file; type=string; label=Path to template partials (FE)
-    partialRootPath = EXT:typo3_alloneaccessibility/Resources/Private/Partials/
+    partialRootPath = EXT:alloneaccessibility/Resources/Private/Partials/
     # cat=plugin.tx_typo3alloneaccessibility_tool/file; type=string; label=Path to template layouts (FE)
-    layoutRootPath = EXT:typo3_alloneaccessibility/Resources/Private/Layouts/
+    layoutRootPath = EXT:talloneaccessibility/Resources/Private/Layouts/
   }
   
 }
 
-module.tx_typo3allinoneaccessibility_Sntg_typo3allinoneaccessibilitytoolmodule {
+module.tx_allinoneaccessibility_Sntg_allinoneaccessibilitytoolmodule {
   view {
-    # cat=module.tx_nswhasapp_whastappmodule/file; type=string; label=Path to template root (BE)
-    templateRootPath = EXT:typo3_allinoneaccessibility/Resources/Private/Backend/Templates/
-    # cat=module.tx_nswhasapp_whastappmodule/file; type=string; label=Path to template partials (BE)
-    partialRootPath = EXT:typo3_allinoneaccessibility/Resources/Private/Backend/Partials/
-    # cat=module.tx_nswhasapp_whastappmodule/file; type=string; label=Path to template layouts (BE)
-    layoutRootPath = EXT:typo3_allinoneaccessibility/Resources/Private/Backend/Layouts/
+    templateRootPath = EXT:allinoneaccessibility/Resources/Private/Backend/Templates/
+    partialRootPath = EXT:allinoneaccessibility/Resources/Private/Backend/Partials/
+    layoutRootPath = EXT:allinoneaccessibility/Resources/Private/Backend/Layouts/
   }
 
 }

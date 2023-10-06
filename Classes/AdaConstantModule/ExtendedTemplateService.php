@@ -1,5 +1,5 @@
 <?php
-namespace Skynettechnologies\Typo3Allinoneaccessibility\AdaConstantModule;
+namespace Skynettechnologies\Allinoneaccessibility\AdaConstantModule;
 
 /*
  * This file is part of the TYPO3 CMS project.

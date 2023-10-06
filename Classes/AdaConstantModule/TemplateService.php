@@ -1,5 +1,5 @@
 <?php
-namespace Skynettechnologies\Typo3Allinoneaccessibility\AdaConstantModule;
+namespace Skynettechnologies\Allinoneaccessibility\AdaConstantModule;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -376,7 +376,7 @@ class TemplateService
             'typo3conf/ext/',
         ];
         if ($GLOBALS['TYPO3_CONF_VARS']['FE']['addAllowedPaths']) {
-            $pathArr = GeneralUtility::trimExplode(',', $GLOBALS['TYPO3_CONF_VARS']['FE']['addAllowedPaths'], true);
+            $pathArr = GeneralUtility::trimExplode(',', $GLOBALS['CONF_VARS']['FE']['addAllowedPaths'], true);
             foreach ($pathArr as $p) {
                 // Once checked for path, but as this may run from typo3/mod/web/ts/ dir, that'll not work!! So the paths ar uncritically included here.
                 $this->allowedPaths[] = $p;

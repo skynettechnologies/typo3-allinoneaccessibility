@@ -1,7 +1,7 @@
 <?php
-namespace Skynettechnologies\Typo3Allinoneaccessibility\Property;
+namespace Skynettechnologies\Allinoneaccessibility\Property;
 
-use Skynettechnologies\Typo3Allinoneaccessibility\Utility\ArrayUtility as SntgArrayUtility;
+use Skynettechnologies\Allinoneaccessibility\Utility\ArrayUtility as SntgArrayUtility;
 use TYPO3\CMS\Core\Utility\ArrayUtility as ExtbaseArrayUtility;
 
 /**

@@ -4,17 +4,17 @@ services:
     autoconfigure: true
     public: false
 
-  Skynettechnologies\Typo3Allinoneaccessibility\:
+  Skynettechnologies\Allinoneaccessibility\:
     resource: '../Classes/*'
 
-  Skynettechnologies\Typo3Allinoneaccessibility\Property\TypeConverter\UploadedFileReferenceConverter:
+  Skynettechnologies\Allinoneaccessibility\Property\TypeConverter\UploadedFileReferenceConverter:
     tags:
       - name: extbase.type_converter
         priority: 32
         target: TYPO3\CMS\Extbase\Domain\Model\FileReference
         sources: array
 
-  Skynettechnologies\Typo3Allinoneaccessibility\Property\TypeConverter\ObjectStorageConverter:
+  Skynettechnologies\Allinoneaccessibility\Property\TypeConverter\ObjectStorageConverter:
     tags:
       - name: extbase.type_converter
         priority: 22

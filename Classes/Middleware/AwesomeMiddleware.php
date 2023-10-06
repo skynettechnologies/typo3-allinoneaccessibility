@@ -1,5 +1,5 @@
 <?php
-namespace Skynettechnologies\Typo3Allinoneaccessibility\Middleware;
+namespace Skynettechnologies\Allinoneaccessibility\Middleware;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -18,6 +18,7 @@ class AwesomeMiddleware implements MiddlewareInterface
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         $response = $handler->handle($request);
+        
         $host = GeneralUtility::locationHeaderUrl( '/' );
         $domain = parse_url($host, PHP_URL_HOST);
         $projectName = end(explode("/",(Environment::getProjectPath())));
@@ -38,10 +39,9 @@ class AwesomeMiddleware implements MiddlewareInterface
           $getData = json_decode($result, true);
         /* ---- All in One accessibility script */
         $script = "";
-        // print_r(222);
-        // print_r($getData);die;
+        
         if(!empty($getData)){
-            //print_r(1);die;
+            
             if($getData['isexit_user'] == 1){
                 
                 $script .= "<script id='aioa-adawidget' src='https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=".$getData['color']."&token=".$getData['licensekey']."&position=".$getData['position'].".".$getData['icon_type'].".".$getData['icon_size']."' async='true'></script>";
