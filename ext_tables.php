@@ -2,7 +2,7 @@
 // TYPO3 Security Check
 defined('TYPO3_MODE') or die();
 
-$_EXTKEY = $GLOBALS['_EXTKEY'] = 'typo3_allinoneaccessibility';
+$_EXTKEY = $GLOBALS['_EXTKEY'] = 'allinoneaccessibility';
 
 //Add Modules
 if (TYPO3_MODE === 'BE') {
@@ -23,19 +23,19 @@ if (TYPO3_MODE === 'BE') {
             }
             $GLOBALS['TBE_MODULES'] = $temp_TBE_MODULES;
             $GLOBALS['TBE_MODULES']['_configuration']['skynettechnologies'] = [
-                'iconIdentifier' => 'module-typo3allinoneaccessibility',
-                'labels' => 'LLL:EXT:typo3_allinoneaccessibility/Resources/Private/Language/BackendModule.xlf',
+                'iconIdentifier' => 'module-allinoneaccessibility',
+                'labels' => 'LLL:EXT:allinoneaccessibility/Resources/Private/Language/BackendModule.xlf',
                 'name' => 'skynettechnologies',
             ];
         }
         
         if (version_compare(TYPO3_branch, '11.0', '>=')) {
-            $moduleClass = \Skynettechnologies\Typo3Allinoneaccessibility\Controller\ToolController::class;
+            $moduleClass = \Skynettechnologies\Allinoneaccessibility\Controller\ToolController::class;
         } else {
             $moduleClass = 'Tool';
         }
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
-            'Skynettechnologies.Typo3Allinoneaccessibility',
+            'Skynettechnologies.Allinoneaccessibility',
             'skynettechnologies', // Make module a submodule of 'skynettechnologies'
             'toolmodule', // Submodule key
             '', // Position
@@ -44,8 +44,8 @@ if (TYPO3_MODE === 'BE') {
             ],
             [
                 'access' => 'user,group',
-                'icon' => 'EXT:typo3_allinoneaccessibility/Resources/Public/Icons/whats_app.svg',
-                'labels' => 'LLL:EXT:typo3_allinoneaccessibility/Resources/Private/Language/locallang_whastappmodule.xlf',
+                'icon' => 'EXT:allinoneaccessibility/Resources/Public/Icons/whats_app.svg',
+                'labels' => 'LLL:EXT:allinoneaccessibility/Resources/Private/Language/locallang_whastappmodule.xlf',
                 'navigationComponentId' => ($isVersion9Up ? 'TYPO3/CMS/Backend/PageTree/PageTreeElement' : 'typo3-pagetree'),
                 'inheritNavigationComponentFromMainModule' => false,
             ]

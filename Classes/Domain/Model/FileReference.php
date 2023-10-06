@@ -1,5 +1,5 @@
 <?php
-namespace Skynettechnologies\Typo3Allinoneaccessibility\Domain\Model;
+namespace Skynettechnologies\Allinoneaccessibility\Domain\Model;
 
 /**
  * Class FileReference

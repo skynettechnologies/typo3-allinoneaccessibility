@@ -8,15 +8,15 @@
     },
     "autoload": {
         "psr-4": {
-            "Skynettechnologies\\Typo3Allinoneaccessibility\\": "Classes"
+            "Skynettechnologies\\Allinoneaccessibility\\": "Classes"
         }
     },
     "replace": {
-        "typo3-ter/typo3-allinoneaccessibility": "*"
+        "typo3-ter/allinoneaccessibility": "*"
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "typo3_allinoneaccessibility"
+            "extension-key": "allinoneaccessibility"
         }
     }
 }

@@ -1,5 +1,5 @@
 <?php
-namespace Skynettechnologies\Typo3Allinoneaccessibility\Middleware;
+namespace Skynettechnologies\Allinoneaccessibility\Middleware;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
