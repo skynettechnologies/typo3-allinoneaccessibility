@@ -1,5 +1,5 @@
 <?php
-namespace Skynettechnologies\Typo3Allinoneaccessibility\AdaConstantModule;
+namespace Skynettechnologies\Allinoneaccessibility\AdaConstantModule;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -151,7 +151,7 @@ class TypoScriptTemplateConstantEditorModuleFunctionController
 
             $category = strtolower((string)GeneralUtility::_GP('cat'));
             if ($category == '') {
-                $category = 'ns_whatsapp_chat';
+                $category = 'allinone_chat';
             }
             // Category and constant editor config:
             $printFields = trim($this->templateService->ext_printFields($this->constants, $category));
@@ -174,7 +174,7 @@ class TypoScriptTemplateConstantEditorModuleFunctionController
                 $view->assign('link', $aHref);
             }
             $view->setTemplatePathAndFilename(GeneralUtility::getFileAbsFileName(
-                'EXT:typo3_allinoneaccessibility/Resources/Private/Backend/Templates/NoConstant.html'
+                'EXT:allinoneaccessibility/Resources/Private/Backend/Templates/NoConstant.html'
             ));
             $theOutput = $view->render();
         }

@@ -1,8 +1,8 @@
 <?php
-namespace Skynettechnologies\Typo3Allinoneaccessibility\Controller;
+namespace Skynettechnologies\Allinoneaccessibility\Controller;
 
-use Skynettechnologies\Typo3Allinoneaccessibility\AdaConstantModule\TypoScriptTemplateConstantEditorModuleFunctionController;
-use Skynettechnologies\Typo3Allinoneaccessibility\Property\TypeConverter\UploadedFileReferenceConverter;
+use Skynettechnologies\Allinoneaccessibility\AdaConstantModule\TypoScriptTemplateConstantEditorModuleFunctionController;
+use Skynettechnologies\Allinoneaccessibility\Property\TypeConverter\UploadedFileReferenceConverter;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Property\PropertyMappingConfiguration;
 use TYPO3\CMS\Tstemplate\Controller\TypoScriptTemplateModuleController;
@@ -28,12 +28,12 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     /**
      * toolstyleRepository
      *
-     * @var \Skynettechnologies\Typo3Allinoneaccessibility\Domain\Repository\ToolRepository
+     * @var \Skynettechnologies\Allinoneaccessibility\Domain\Repository\ToolRepository
      */
     protected $toolstyleRepository = null;
 
     public function __construct(
-        \Skynettechnologies\Typo3Allinoneaccessibility\Domain\Repository\ToolstyleRepository $toolstyleRepository
+        \Skynettechnologies\Allinoneaccessibility\Domain\Repository\ToolstyleRepository $toolstyleRepository
     ) {
         $this->toolstyleRepository = $toolstyleRepository;
     }
@@ -94,6 +94,7 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     {
         $this->view->assign('action', 'chatSettings');
         $this->view->assign('constant', $this->constants);
+        
         $host = GeneralUtility::locationHeaderUrl( '/' );
         $domain = parse_url($host, PHP_URL_HOST);
         
@@ -101,7 +102,6 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $hash = sha1($projectName."typo3_accessibility_" . preg_replace("/www\.|https?:\/\/|\/$|\/?\?.+|\/.+|^\./", '', $domain));
         $this->view->assign('hash', $hash);
         $this->view->assign('domain', $domain);
-        
         return $this->htmlResponse();
     }
 }
