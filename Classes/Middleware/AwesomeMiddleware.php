@@ -12,6 +12,9 @@ use TYPO3\CMS\Core\Http\Stream;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Core\Environment;
 
+
+
+
 class AwesomeMiddleware implements MiddlewareInterface
 {
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
