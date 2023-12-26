@@ -1,8 +1,8 @@
 define([
     'jquery',
     'TYPO3/CMS/Backend/Modal',
-    'TYPO3/CMS/Allinoneaccessibility/Main',
-    'TYPO3/CMS/Allinoneaccessibility/Datatables',
+    'TYPO3/CMS/Typo3Allinoneaccessibility/Main',
+    'TYPO3/CMS/Typo3Allinoneaccessibility/Datatables',
     'TYPO3/CMS/Backend/jquery.clearable'
 ], function ($, Model) {
     $(document).on("click", ".save", function () { 

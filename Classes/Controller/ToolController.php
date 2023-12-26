@@ -1,8 +1,8 @@
 <?php
-namespace Skynettechnologies\Allinoneaccessibility\Controller;
+namespace Skynettechnologies\Typo3Allinoneaccessibility\Controller;
 
-use Skynettechnologies\Allinoneaccessibility\AdaConstantModule\TypoScriptTemplateConstantEditorModuleFunctionController;
-use Skynettechnologies\Allinoneaccessibility\Property\TypeConverter\UploadedFileReferenceConverter;
+use Skynettechnologies\Typo3Allinoneaccessibility\AdaConstantModule\TypoScriptTemplateConstantEditorModuleFunctionController;
+use Skynettechnologies\Typo3Allinoneaccessibility\Property\TypeConverter\UploadedFileReferenceConverter;
 use TYPO3\CMS\Core\TypoScript\ExtendedTemplateService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Annotation\Inject as inject;
@@ -28,15 +28,15 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     /**
      * ToolRepository
      *
-     * @var \Skynettechnologies\Allinoneaccessibility\Domain\Repository\ToolRepository
+     * @var \Skynettechnologies\Typo3Allinoneaccessibility\Domain\Repository\ToolRepository
      * @inject
      */
     protected $ToolRepository = null;
 
     /**
-     * @param \Skynettechnologies\Allinoneaccessibility\Domain\Repository\ToolstyleRepository $ToolstyleRepository
+     * @param \Skynettechnologies\Typo3Allinoneaccessibility\Domain\Repository\ToolstyleRepository $ToolstyleRepository
      */
-    public function injectToolstyleRepository(\Skynettechnologies\Allinoneaccessibility\Domain\Repository\ToolstyleRepository $toolstyleRepository)
+    public function injectToolstyleRepository(\Skynettechnologies\Typo3Allinoneaccessibility\Domain\Repository\ToolstyleRepository $toolstyleRepository)
     {
         $this->toolstyleRepository = $toolstyleRepository;
     }

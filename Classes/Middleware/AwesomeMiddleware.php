@@ -1,5 +1,5 @@
 <?php
-namespace Skynettechnologies\Allinoneaccessibility\Middleware;
+namespace Skynettechnologies\Typo3Allinoneaccessibility\Middleware;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -11,8 +11,6 @@ use TYPO3\CMS\Core\Http\Response;
 use TYPO3\CMS\Core\Http\Stream;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Core\Environment;
-
-
 
 
 class AwesomeMiddleware implements MiddlewareInterface
@@ -39,7 +37,20 @@ class AwesomeMiddleware implements MiddlewareInterface
           $result = file_get_contents($url, false, $context);
           $getData = json_decode($result, true);
         /* ---- All in One accessibility script */
-        $script = "<script id='aioa-adawidget' src='https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=".$getData['color']."&token=".$getData['licensekey']."&position=".$getData['position'].".".$getData['icon_type'].".".$getData['icon_size']."' async='true'></script>";
+        $script = "";
+        
+        if(!empty($getData)){
+            
+            if($getData['isexit_user'] == 1){
+                
+                $script .= "<script id='aioa-adawidget' src='https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=".$getData['color']."&token=".$getData['licensekey']."&position=".$getData['position'].".".$getData['icon_type'].".".$getData['icon_size']."' async='true'></script>";
+            }else{
+                if($getData['isvalid_key'] == 1){
+                    $script .= "<script id='aioa-adawidget' src='https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=".$getData['color']."&token=".$getData['licensekey']."&position=".$getData['position'].".".$getData['icon_type'].".".$getData['icon_size']."' async='true'></script>";
+                }
+                
+            }
+        }
         
 		$html = $response->getBody();
         $html = str_replace("</body>","$script</body>",$html);

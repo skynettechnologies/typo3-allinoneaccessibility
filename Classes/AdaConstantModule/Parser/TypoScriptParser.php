@@ -1,5 +1,5 @@
 <?php
-namespace Skynettechnologies\Allinoneaccessibility\AdaConstantModule\Parser;
+namespace Skynettechnologies\Typo3Allinoneaccessibility\AdaConstantModule\Parser;
 
 /*
  * This file is part of the TYPO3 CMS project.
