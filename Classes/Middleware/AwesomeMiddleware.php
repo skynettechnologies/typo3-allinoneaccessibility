@@ -38,9 +38,9 @@ class AwesomeMiddleware implements MiddlewareInterface
           $getData = json_decode($result, true);
         /* ---- All in One accessibility script */
         $script = "";
-        
         $script .= "<script id='aioa-adawidget' src='https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=".$getData['color']."&token=".$getData['licensekey']."&position=".$getData['position'].".".$getData['icon_type'].".".$getData['icon_size']."' async='true'></script>";
          
+
 		$html = $response->getBody();
         $html = str_replace("</body>","$script</body>",$html);
 

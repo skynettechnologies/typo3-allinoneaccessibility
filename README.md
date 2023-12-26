@@ -3,4 +3,3 @@ All in One Accessibility widget improves Typo3 website ADA compliance and browse
 
 It uses the accessibility interface which handles UI and design related adjustments. All in One Accessibility app enhances your Typo3 website accessibility to people with hearing or vision impairments, motor impaired, color blind, dyslexia, cognitive & learning impairments, seizure and epileptic, and ADHD problems.
 
-- FREE version: You can download FREE version with basic-features at https://extensions.typo3.org/extension/allinoneaccessibility
