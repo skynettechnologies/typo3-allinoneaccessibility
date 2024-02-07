@@ -61,8 +61,8 @@
             <trans-unit id="templatelinkText">
                 <source>Template</source>
             </trans-unit>
-			<trans-unit id="chatSettings">
-				<source>Chat</source>
+			<trans-unit id="ttings">
+				<source>Widget</source>
 			</trans-unit>
             <trans-unit id="shareSettings">
                 <source>Share</source>
@@ -73,8 +73,8 @@
             <trans-unit id="styleSettings">
                 <source>Style</source>
             </trans-unit>
-            <trans-unit id="cat_chat">
-                <source>Chat </source>
+            <trans-unit id="cat_widget">
+                <source>Widget </source>
             </trans-unit>
             <trans-unit id="cat_style">
                 <source>Style Settings</source>

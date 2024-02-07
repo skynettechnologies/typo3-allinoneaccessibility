@@ -169,7 +169,7 @@ class TypoScriptTemplateConstantEditorModuleFunctionController
 
             $category = strtolower((string)GeneralUtility::_GP('cat'));
             if ($category == '') {
-                $category = 'typo3_allinoneaccessibility_chat';
+                $category = 'typo3_allinoneaccessibility_widget';
             }
             // Category and constant editor config:
             $printFields = trim($this->templateService->ext_printFields($this->constants, $category));

@@ -40,7 +40,7 @@ if (TYPO3_MODE === 'BE') {
             'toolmodule', // Submodule key
             '', // Position
             [
-                $moduleClass => 'chatSettings',
+                $moduleClass => 'widgetSettings',
             ],
             [
                 'access' => 'user,group',

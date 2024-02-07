@@ -92,13 +92,13 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     }
     
     /**
-     * action chatSettingsAction
+     * action widgetSettingsAction
      *
      * @return void
      */
-    public function chatSettingsAction()
+    public function widgetSettingsAction()
     {
-        $this->view->assign('action', 'chatSettings');
+        $this->view->assign('action', 'widgetSettings');
         $this->view->assign('constant', $this->constants);
         $host = GeneralUtility::locationHeaderUrl( '/' );
         $domain = parse_url($host, PHP_URL_HOST);

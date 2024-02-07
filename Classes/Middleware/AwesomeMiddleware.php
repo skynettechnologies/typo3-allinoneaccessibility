@@ -40,16 +40,9 @@ class AwesomeMiddleware implements MiddlewareInterface
         $script = "";
         
         if(!empty($getData)){
-            
-            if($getData['isexit_user'] == 1){
-                
-                $script .= "<script id='aioa-adawidget' src='https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=".$getData['color']."&token=".$getData['licensekey']."&position=".$getData['position'].".".$getData['icon_type'].".".$getData['icon_size']."' async='true'></script>";
-            }else{
-                if($getData['isvalid_key'] == 1){
-                    $script .= "<script id='aioa-adawidget' src='https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=".$getData['color']."&token=".$getData['licensekey']."&position=".$getData['position'].".".$getData['icon_type'].".".$getData['icon_size']."' async='true'></script>";
-                }
-                
-            }
+            $script .= "<script id='aioa-adawidget' src='https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=".$getData['color']."&token=".$getData['licensekey']."&position=".$getData['position'].".".$getData['icon_type'].".".$getData['icon_size']."' async='true'></script>";
+        }else{
+            $script .= "<script id='aioa-adawidget' src='https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=#420083&token=&position=bottom_right.aioa-icon-type-1.aioa-medium-icon' async='true'></script>";
         }
         
 		$html = $response->getBody();
