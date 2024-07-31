@@ -98,10 +98,29 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $host = GeneralUtility::locationHeaderUrl( '/' );
         $domain = parse_url($host, PHP_URL_HOST);
         
-        $projectName = end(explode("/",(Environment::getProjectPath())));
-        $hash = sha1($projectName."typo3_accessibility_" . preg_replace("/www\.|https?:\/\/|\/$|\/?\?.+|\/.+|^\./", '', $domain));
-        $this->view->assign('hash', $hash);
-        $this->view->assign('domain', $domain);
+        $curl = curl_init();
+		curl_setopt_array($curl, array(
+		CURLOPT_URL => 'https://ada.skynettechnologies.us/check-website',
+		CURLOPT_RETURNTRANSFER => true,
+		CURLOPT_ENCODING => '',
+		CURLOPT_MAXREDIRS => 10,
+		CURLOPT_TIMEOUT => 0,
+		CURLOPT_FOLLOWLOCATION => true,
+		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		CURLOPT_CUSTOMREQUEST => 'POST',
+		CURLOPT_POSTFIELDS => array('domain' =>  $domain),
+		));
+
+		$response = curl_exec($curl);
+
+		curl_close($curl);
+		$settingURLObject = json_decode($response);
+
+        $this->view->assign('aioa_status', $settingURLObject->status);
+        $this->view->assign('aioa_website_domain', $domain);
+        $this->view->assign('aioa_iframe', $settingURLObject->settinglink);
+        $this->view->assign('manage_domain', $settingURLObject->manage_domain);
+
         return $this->htmlResponse();
     }
 }
