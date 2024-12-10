@@ -8,6 +8,8 @@ use TYPO3\CMS\Extbase\Property\PropertyMappingConfiguration;
 use TYPO3\CMS\Tstemplate\Controller\TypoScriptTemplateModuleController;
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Core\Core\Environment;
+use TYPO3\CMS\Core\Database\Query\QueryBuilder;
+use TYPO3\CMS\Core\Database\ConnectionPool;
 
 /***
  *
@@ -92,34 +94,29 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function chatSettingsAction(): ResponseInterface
     {
+        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('be_users');
+
+$query = $queryBuilder
+    ->select('*')
+    ->from('be_users');
+
+$result = $query->execute()->fetchAll();
+foreach($result as $row){
+   
+}
+
+
         $this->view->assign('action', 'chatSettings');
         $this->view->assign('constant', $this->constants);
         
-        $host = GeneralUtility::locationHeaderUrl( '/' );
-        $domain = parse_url($host, PHP_URL_HOST);
+       
+        $user_name = $row['username'];
+        $user_email = $row['email'];
         
-        $curl = curl_init();
-		curl_setopt_array($curl, array(
-		CURLOPT_URL => 'https://ada.skynettechnologies.us/check-website',
-		CURLOPT_RETURNTRANSFER => true,
-		CURLOPT_ENCODING => '',
-		CURLOPT_MAXREDIRS => 10,
-		CURLOPT_TIMEOUT => 0,
-		CURLOPT_FOLLOWLOCATION => true,
-		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-		CURLOPT_CUSTOMREQUEST => 'POST',
-		CURLOPT_POSTFIELDS => array('domain' =>  $domain),
-		));
-
-		$response = curl_exec($curl);
-
-		curl_close($curl);
-		$settingURLObject = json_decode($response);
-
-        $this->view->assign('aioa_status', $settingURLObject->status);
-        $this->view->assign('aioa_website_domain', $domain);
-        $this->view->assign('aioa_iframe', $settingURLObject->settinglink);
-        $this->view->assign('manage_domain', $settingURLObject->manage_domain);
+      
+        $this->view->assign('username', $user_name);
+        $this->view->assign('useremail', $user_email);
+       
 
         return $this->htmlResponse();
     }
