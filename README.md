@@ -1,4 +1,4 @@
-# All in One Accessibility™
+# All in One Accessibility®
 
 All in One Accessibility AI Widget Supports 140 Languages and includes 70+ features. Screen Reader, Talk & Type, Voice Navigation, Dictionary, Virtual Keyboard, Accessibility Profiles, Sign language Libras (Brazilian Portuguese) Custom Widget Color, Icon size, Position, Talk & Type, GA4 Tracking and custom accessibility statement link are some of the top features.
    
@@ -94,7 +94,7 @@ Partner with us as an agency to provide comprehensive accessibility solutions to
 
 #### [Affiliate Partnership](https://www.skynettechnologies.com/affiliate-partner)
 
-Join our affiliate program and earn commissions by promoting All in One Accessibility™. Share our Widget with your network and help businesses improve their website accessibility while generating revenue.
+Join our affiliate program and earn commissions by promoting All in One Accessibility®. Share our Widget with your network and help businesses improve their website accessibility while generating revenue.
 
 For more details, Please visit [Partnership Opportunities Page](https://www.skynettechnologies.com/partner-program)
 
