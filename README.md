@@ -38,7 +38,7 @@ Must have installed your project used by composer.
 
 2. Then tell Composer to load the plugin:
 
-    composer require skynettechnologies/allinoneaccessibility
+   composer require skynettechnologies/typo3-allinoneaccessibility
 
 3. In the Control Panel, go to Skynettechnologies → All in One Accessibility.
 
