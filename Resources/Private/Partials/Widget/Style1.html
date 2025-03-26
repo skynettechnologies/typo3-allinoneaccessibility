@@ -10,7 +10,7 @@
     color: {whatsapp.htextcolor} !important;
 	}
 </style>
-<div class="ada-widget-variant typo3-allinoneaccessibility-variant--one ">
+<div class="ada-widget-variant allinoneaccessibility-variant--one ">
     <f:link.external class="adawidget-btn style1"
         uri="https://{f:if(condition: '{settings.web_whatsapp}', then: 'web', else: 'api')}.whatsapp.com/send/?phone={settings.whatsapp_number}&text={settings.pre_filled_message}{f:if(condition: '{settings.web_whatsapp}', then: '',  else: '&app_absent=0')}" target="_blank">{whatsapp.text}</f:link.external>
 </div>
