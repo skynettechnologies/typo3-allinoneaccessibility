@@ -50,7 +50,7 @@ English (USA), English (UK), English (Australian), English (Canadian), English (
 ## Installation
 
 ### Prerequisites
-- Typo version 13
+- Typo version 13*
 
 ### Steps
 
@@ -112,7 +112,7 @@ To avoid CORS policy issues, ensure the following URLs are allowed in your websi
 3. Verify the application functionality by testing requests to these domains.
 4. If issues persist, consult the Typo3 documentation for CORS configuration guidance.
 
-## Configuration
+## Configuration 
 
 To configure the widget, access the Admin Panel and head to the All in One Accessibility menu in the dashboard. From there, you can register [here](https://ada.skynettechnologies.us/trial-subscription) with 10 Days free trial.
 
