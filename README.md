@@ -1,4 +1,4 @@
-# All in One Accessibility®: Hygraph App
+# All in One Accessibility®: Typo3 Extension
 
 ## Enhance Your Website's Accessibility with All in One Accessibility®
 
