@@ -280,4 +280,4 @@ This addon is developed and maintained by **[Skynet Technologies USA LLC](https:
 
 ## License
 
-[MIT](LICENSE) © Skynet Technologies USA LLC
+[GPL](LICENSE) © Skynet Technologies USA LLC

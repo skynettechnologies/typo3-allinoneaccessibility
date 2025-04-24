@@ -108,7 +108,7 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $host = GeneralUtility::locationHeaderUrl( '/' );
         $domain = parse_url($host, PHP_URL_HOST);
         
-        // Query 'be_users' table
+        // Fetch User detail from database and send chatSettings.php file
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('be_users');
         $result = $queryBuilder
             ->select('*')
