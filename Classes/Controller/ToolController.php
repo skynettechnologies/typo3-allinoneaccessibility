@@ -1,4 +1,5 @@
 <?php
+
 namespace Skynettechnologies\Allinoneaccessibility\Controller;
 
 use Skynettechnologies\Allinoneaccessibility\Property\TypeConverter\UploadedFileReferenceConverter;
@@ -10,6 +11,7 @@ use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use Skynettechnologies\Allinoneaccessibility\Controller\ConstantClass;
+
 /***
  *
  * This file is part of the "All in one Accessibility" Extension for TYPO3 CMS.
@@ -60,7 +62,6 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     public function initializeObject()
     {
         $this->contentObject = GeneralUtility::makeInstance('TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer');
-       
     }
 
     /**
@@ -69,20 +70,20 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * @return void
      */
     public function initializeAction(): void
-{
-    
-    // Ensure that $this->constantObj is initialized before calling any methods on it
-    if ($this->constantObj === null) {
-        // Instantiate the ConstantClass object
-        $this->constantObj = GeneralUtility::makeInstance(\Skynettechnologies\Allinoneaccessibility\Controller\ConstantClass::class);
+    {
+
+        // Ensure that $this->constantObj is initialized before calling any methods on it
+        if ($this->constantObj === null) {
+            // Instantiate the ConstantClass object
+            $this->constantObj = GeneralUtility::makeInstance(\Skynettechnologies\Allinoneaccessibility\Controller\ConstantClass::class);
+        }
+
+        // Now call the init method on the initialized object
+        $this->constantObj->init($this->pObj);
+
+        // Get the constants from the main method
+        $this->constants = $this->constantObj->main();
     }
-
-    // Now call the init method on the initialized object
-    $this->constantObj->init($this->pObj);
-
-    // Get the constants from the main method
-    $this->constants = $this->constantObj->main();
-}
 
     /**
      * action list
@@ -101,13 +102,13 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function chatSettingsAction(): ResponseInterface
     {
-       
+
         $this->view->assign('action', 'chatSettings');
         $this->view->assign('constant', $this->constants);
-        
-        $host = GeneralUtility::locationHeaderUrl( '/' );
+
+        $host = GeneralUtility::locationHeaderUrl('/');
         $domain = parse_url($host, PHP_URL_HOST);
-        
+
         // Fetch User detail from database and send chatSettings.php file
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('be_users');
         $result = $queryBuilder
@@ -115,10 +116,10 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
             ->from('be_users')
             ->executeQuery()
             ->fetchAllAssociative();
-    
+
         $user_name = $result[0]['username'] ?? '';
         $user_email = $result[0]['email'] ?? '';
-    
+
         // Assign variables to the view
         $this->view->assignMultiple([
             'action' => 'chatSettings',
@@ -127,7 +128,20 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
             'useremail' => $user_email,
             'domain' => $domain,
         ]);
-    
+
+        // Load HTML from a file or embed directly
+
+        $this->view->getTemplatePaths()->setLayoutRootPaths([
+            GeneralUtility::getFileAbsFileName('EXT:typo3_allinoneaccessibility/Resources/Private/Layouts/')
+        ]);
+
+        $this->view->setTemplatePathAndFilename(
+            GeneralUtility::getFileAbsFileName('EXT:typo3_allinoneaccessibility/Resources/Private/Templates/Tool/ChatSettings.html')
+        );
+
+        // $url = 'url='.$domain.'&username='.$user_name.'&email='.$user_email.'';
+        // $this->view->assign('iframeUrl', $url);
+
         return $this->htmlResponse();
     }
 }
