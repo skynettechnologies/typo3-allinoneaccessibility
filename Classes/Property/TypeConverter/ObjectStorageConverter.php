@@ -1,5 +1,5 @@
 <?php
-namespace Skynettechnologies\Allinoneaccessibility\Property\TypeConverter;
+namespace Skynettechnologies\Typo3Allinoneaccessibility\Property\TypeConverter;
 
 /**
  * Class ObjectStorageConverter

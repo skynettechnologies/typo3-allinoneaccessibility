@@ -1,5 +1,5 @@
 <?php
-namespace Skynettechnologies\Allinoneaccessibility\Domain\Model;
+namespace Skynettechnologies\Typo3Allinoneaccessibility\Domain\Model;
 
 /***
  *
