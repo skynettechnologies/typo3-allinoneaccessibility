@@ -1,8 +1,8 @@
 define([
     'jquery',
     'TYPO3/CMS/Backend/Modal',
-    'TYPO3/CMS/Allinoneaccessibility/Main',
-    'TYPO3/CMS/Allinoneaccessibility/Datatables',
+    'TYPO3/CMS/Skynetaccessibilityscanner/Main',
+    'TYPO3/CMS/Skynetaccessibilityscanner/Datatables',
 ], function ($, Model) {
     $(document).on("click", ".save", function () {
         $('.flashmessage').html("<p class='alert alert-success'>Your changes has been saved successfully</p>");

@@ -10,11 +10,11 @@ plugin.tx_typo3alloneaccessibility_tool {
   
 }
 
-module.tx_allinoneaccessibility_Sntg_allinoneaccessibilitytoolmodule {
+module.tx_skynetaccessibilityscanner_Sntg_skynetaccessibilityscannertoolmodule {
   view {
-    templateRootPath = EXT:allinoneaccessibility/Resources/Private/Backend/Templates/
-    partialRootPath = EXT:allinoneaccessibility/Resources/Private/Backend/Partials/
-    layoutRootPath = EXT:allinoneaccessibility/Resources/Private/Backend/Layouts/
+    templateRootPath = EXT:skynetaccessibilityscanner/Resources/Private/Backend/Templates/
+    partialRootPath = EXT:skynetaccessibilityscanner/Resources/Private/Backend/Partials/
+    layoutRootPath = EXT:skynetaccessibilityscanner/Resources/Private/Backend/Layouts/
   }
 
 }

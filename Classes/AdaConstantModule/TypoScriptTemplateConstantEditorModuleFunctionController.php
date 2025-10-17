@@ -1,5 +1,5 @@
 <?php
-namespace Skynettechnologies\Allinoneaccessibility\AdaConstantModule;
+namespace Skynettechnologies\Skynetaccessibilityscanner\AdaConstantModule;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -174,7 +174,7 @@ class TypoScriptTemplateConstantEditorModuleFunctionController
                 $view->assign('link', $aHref);
             }
             $view->setTemplatePathAndFilename(GeneralUtility::getFileAbsFileName(
-                'EXT:allinoneaccessibility/Resources/Private/Backend/Templates/NoConstant.html'
+                'EXT:skynetaccessibilityscanner/Resources/Private/Backend/Templates/NoConstant.html'
             ));
             $theOutput = $view->render();
         }

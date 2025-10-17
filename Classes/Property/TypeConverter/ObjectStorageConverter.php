@@ -1,5 +1,5 @@
 <?php
-namespace Skynettechnologies\Allinoneaccessibility\Property\TypeConverter;
+namespace Skynettechnologies\Skynetaccessibilityscanner\Property\TypeConverter;
 
 /**
  * Class ObjectStorageConverter
@@ -16,7 +16,7 @@ class ObjectStorageConverter extends \TYPO3\CMS\Extbase\Property\TypeConverter\O
      *
      * @var int
      */
-    protected $priority = 20;
+    protected $priority = 22;
 
     /**
      * Return the source, if it is an array, otherwise an empty array.

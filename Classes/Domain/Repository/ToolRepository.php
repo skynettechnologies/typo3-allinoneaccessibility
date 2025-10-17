@@ -1,12 +1,12 @@
 <?php
-namespace Skynettechnologies\Allinoneaccessibility\Domain\Repository;
+namespace Skynettechnologies\Skynetaccessibilityscanner\Domain\Repository;
 
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /***
  *
- * This file is part of the "All in one accessibility" Extension for TYPO3 CMS.
+ * This file is part of the "SkynetAccessibility Scanner" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.

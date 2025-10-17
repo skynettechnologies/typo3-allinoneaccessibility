@@ -1,139 +1,95 @@
-# All in One Accessibility®: 
+# SkynetAccessibility Scanner
 
-## Enhance Your Website's Accessibility with All in One Accessibility®
+## Overview
 
-**Did you know?** Your website's accessibility can make or break your audience's experience. With the **All in One Accessibility AI Free Accessibility Widget**, you can instantly boost your site's inclusivity and support over **140+ languages**! Experience the power of **23 essential features** in our free version and take the first step towards creating a better web for everyone.
+The **SkynetAccessibility Scanner Application** is a powerful **Accessibility Testing Tool** and **Accessibility Scanning Software** that enables organizations, businesses, government entities, and individuals to proactively scan, monitor, and remediate accessibility compliance issues. It functions as both an **Accessibility Checker** and **Accessibility Compliance Testing Software**, ensuring websites and applications meet global and regional accessibility standards.  
 
-### Why All in One Accessibility®?
+It supports compliance with **WCAG 2.0, 2.1, 2.2, ADA, Section 508, European EN 301 549, UK Equality Act, Australian DDA, Canada ACA, and European countries accessibility standards (such as Germany BITV 2.0, France RGAA, Spain UNE 139803, and Italy Stanca Act)**. With user-friendly issue highlighting and remediation recommendations, even non-technical users can resolve accessibility challenges effectively.
 
-This lightweight and flexible widget is designed to improve your website’s compliance with **international accessibility standards**, including:
+This tool is designed for:
 
-### **International Standards**
+- Businesses of all sizes  
+- Enterprises  
+- Government entities  
+- Website owners  
+- E-commerce platforms  
+- Development and maintenance agencies  
 
-- **WCAG 2.0, 2.1, & 2.2** (Web Content Accessibility Guidelines)  
-- **ATAG 2.0** (Authoring Tool Accessibility Guidelines)  
-- **PDF/UA – ISO 14289** (Accessible PDF Format)
+[**Start your 10-Day Free Trial today!**](https://skynetaccessibilityscan.com/trial-subscription)
 
-### **United States**
-- **ADA (Americans with Disabilities Act)**  
-- **ADA Title III Website Accessibility**  
-- **Section 508 (U.S. Government Standard)**  
-- **California Unruh Civil Rights Act**  
-- **Texas Website Accessibility Compliance**  
-- **Florida Website Compliance**  
-- **Colorado Accessibility Law**  
-- **Kentucky Web Accessibility**  
-- **New York State Web Accessibility Policy**  
-- **Arizona ADA Compliance**  
-- **Connecticut ADA Web Accessibility**  
-- **Indiana Digital Accessibility**  
-- **Nevada ADA Compliance Requirements**  
-- **Georgia Website ADA Compliance**  
-- **Ohio ADA Compliance**  
-- **Michigan ADA Compliance**  
-- **Virginia Web Accessibility Legislation**  
-- **Kansas ADA Compliance**  
-- **Washington State ADA Compliance**
+## Why SkynetAccessibility Scanner?
 
-### **Canada**
-- **AODA (Accessibility for Ontarians with Disabilities Act)**  
-- **ACA (Accessible Canada Act)**
+In today’s digital world, **Accessibility Testing** isn’t a one-time task. Evolving standards and regulations require continuous monitoring and compliance. This solution empowers organizations to **detect, track, and remediate accessibility violations** across websites, web applications, and documents using advanced **Accessibility Scanning Software**.  
 
-### **United Kingdom**
-- **UK Equality Act (EA)**
+With proactive monitoring, you can ensure that your digital properties remain inclusive and accessible, while minimizing compliance risks.
 
-### **European Union**
-- **EAA / EN 301 549 Accessibility**  
-- **EN 301 549 v4.1.1**
+## Key Features
 
-### **France**
-- **RGAA (Référentiel Général d’Amélioration de l’Accessibilité)**
+- **Accessibility Testing** – Automated scanning and issue detection with actionable guidance.  
+- **Accessibility Checker** – Highlights issues and suggests fixes for developers and content editors.  
+- **10-Days Free Trial** – Get started risk-free. Subscriptions auto-convert after trial, with pay-later flexibility.  
+- **Flexible Subscription** – Cancel anytime with no hidden fees.  
+- **Sitemap-Based Monitoring** – Automatically scans website pages based on sitemap.  
+- **Automated Comprehensive Website Scanning** – Detect WCAG, ADA, Section 508, EN 301 549, and other compliance violations within 24 hours of setup.  
+- **Scheduled Monitoring** – Automate scans weekly, monthly, or quarterly.  
+- **Auto-Generated Scan Reports** – Detailed reports with severity levels, recommendations, and compliance tracking.  
+- **Multi-Language Support** – Scanning and monitoring available in 40+ languages.  
+- **Integration with All in One Accessibility® Dashboard** – Centralized insights and controls.  
+- **Optional Add-Ons** – Enhance compliance with custom add-ons.  
+- **Accessibility Compliance Testing Software** - features for enterprise workflows and audit trails.  
+- **Accessibility Scanning Monitoring Application** - supports API-based integrations for automation and reporting.
 
-### **Germany**
-- **BITV (Barrierefreie-Informationstechnik-Verordnung)**
+## Compliance Standards Supported
 
-### **Italy**
-- **Italian Stanca Act**
+- WCAG 2.0, 2.1, 2.2  
+- ADA  
+- Section 508  
+- EN 301 549 (EU)  
+- UK Equality Act  
+- Australian DDA  
+- Canada ACA
 
-### **Spain**
-- **UNE 139803:2012**
+### European Countries Accessibility Standards
 
-### **Austria**
-- **WZG (Austrian Web Accessibility Act)**
+Our SkynetAccessibility Scanner Application aligns with European country-level accessibility requirements, including (but not limited to):
 
-### **Switzerland**
-- **Swiss Disability Discrimination Act (DDA)**
+- **Germany** — BITV 2.0 (Barrierefreie Informationstechnik-Verordnung)  
+- **France** — RGAA (Référentiel Général d’Amélioration de l’Accessibilité)  
+- **Spain** — UNE 139803 (Spanish accessibility technical standard)  
+- **Italy** — Stanca Act (Legislative Decree on Accessibility of ICT)  
+- **Netherlands** — Tijdelijke richtlijn / Nederland accessibility requirements (aligns with EN 301 549)  
+- **Sweden** — Swedish regulations aligned with EU accessibility directives  
+- **Poland, Belgium, Portugal, Ireland, Greece, Czechia** — national implementations that map to EN 301 549 / WCAG requirements
 
-### **Sweden**
-- **Swedish Discrimination Act (2008:567)**
+> Note: EN 301 549 is the EU-level harmonized standard that maps to WCAG and is widely used as the technical reference for accessibility across EU member states. Individual countries may have additional national guidance and implementation specifics — the scanner flags issues against common technical checks and can be mapped to local regulations for reporting.
 
-### **Israel**
-- **IS 5568 (Israeli Standard)**
+## How It Works
 
-### **Australia**
-- **Australian DDA (Disability Discrimination Act)**
+1. **Scan Your Website** – Run automated scans to detect accessibility issues with our Accessibility Testing Tool.  
+2. **Review Reports** – Access prioritized issue lists with remediation recommendations.  
+3. **Monitor & Maintain** – Keep your website accessible with ongoing monitoring using the Accessibility Scanning Monitoring Application.  
 
-### **India**
-- **RPD Act (Rights of Persons with Disabilities Act)**  
-- **GIGW 3.0 (Guidelines for Indian Government Websites)**
+## Getting Started
 
-### **Brazil**
-- **LBI 13.146/2015 (Brazilian Inclusion Law)**
+1. Visit [Skynet Technologies Accessibility Monitoring](https://www.skynettechnologies.com/accessibility-scanning-and-monitoring).  
+2. Request a demo or sign up for a free [trial](https://skynetaccessibilityscan.com/trial-subscription).  
+3. Configure domains and scan settings.  
+4. Start monitoring accessibility compliance and download reports.
 
-### **Mexico**
-- **ADA-Inspired Web Accessibility Compliance**
+## Who Can Benefit?
 
-### **Japan**
-- **JIS X 8341**
-
-### **South Korea**
-- **KWCAG 2.1 (Korean Web Content Accessibility Guidelines)**
-
-### **Singapore**
-- **DSS and SGDS (Design System and Digital Standards)**
-
-### **Malaysia**
-- **PWD Act 2008 (Persons with Disabilities Act)**
-
-### **Thailand**
-- **PDA 2013 (Persons with Disabilities Empowerment Act)**
-
-### **United Arab Emirates**
-- **UAE Disability Act (Federal Law No. 29 of 2006)**
-
-For more details on supported accessibility laws and standards, visit  
-**[All in One Accessibility Supported Standards](https://www.skynettechnologies.com/accessibility-standards)**
-
-By implementing the widget, you’re not only enhancing user experience but also minimizing the risk of costly accessibility lawsuits. For more details, visit **[All in One Accessibility®.](https://www.skynettechnologies.com/all-in-one-accessibility)**
-
-### Built for Excellence
-
-- Adheres to **ISO 9001:2015** & **ISO 27001:2013** standards.
-- Fully compliant with **GDPR** and **COPPA** regulations.
-- Proud member of **W3C** and the **International Association of Accessibility Professionals (IAAP)**.
-
-### Upgrade to Unlock Premium Features
-
-**Why stop at 23 features?** Unlock over **70+ advanced features** with our **paid subscription** and take your website’s accessibility to the next level. Compare the benefits of Free vs. Paid versions **[here](https://www.skynettechnologies.com/all-in-one-accessibility/features)**.
-
-Checkout the steps for upgrading **[Free to Paid Widget Upgrade Steps](https://www.skynettechnologies.com/blog/upgrade-all-in-one-accessibility-free-widget-to-paid-version#free-paid-version).**
-
-### Start Your Accessibility Journey Today
-
-Try it risk-free with our **10-day free trial**! Don’t wait, experience the benefits today. **[Click to get started](https://ada.skynettechnologies.us/trial-subscription?utm_source=all-in-one-accessibility&utm_medium=landing-page&utm_campaign=trial-subscription)** and join a growing community of forward-thinking businesses making the web accessible to everyone.
-
-**Your website’s accessibility journey begins here. Make an impact.**
-
-For more details, visit **[All in One Accessibility®](https://www.skynettechnologies.com/all-in-one-accessibility)** and transform your digital presence.
-
-### Supported Languages (140+ Languages)
-
-English (USA), English (UK), English (Australian), English (Canadian), English (South Africa), Español, Español (Mexicano), Deutsch, عربى, Português, Português (Brazil), 日本語, Français, Italiano, Polski, Pусский, 中文, 中文 (Traditional), עִברִית, Magyar, Slovenčina, Suomenkieli, Türkçe, Ελληνικά, Latinus, Български, Català, Čeština, Dansk, Nederlands, हिंदी, Bahasa Indonesia, 한국인, Lietuvių, Bahasa Melayu, Norsk, Română, Slovenščina, Svenska, แบบไทย, Українська, Việt Nam, বাঙালি, සිංහල, አማርኛ, Hmoob, မြန်မာ, Eesti keel, latviešu, Cрпски, Hrvatski, ქართული, ʻŌlelo Hawaiʻi, Cymraeg, Cebuano, Samoa, Kreyòl ayisyen, Føroyskt, Crnogorski, Azerbaijani, Euskara, Tagalog, Galego, Norsk Bokmål, فارسی, ਪੰਜਾਬੀ, shqiptare, Hայերեն, অসমীয়া, Aymara, Bamanankan, беларускі, bosanski, Corsu, ދިވެހި, Esperanto, Eʋegbe, Frisian, guarani, ગુજરાતી, Hausa, íslenskur, Igbo, Gaeilge, basa jawa, ಕನ್ನಡ, қазақ, ខ្មែរ, Kinyarwanda, Kurdî, Кыргызча, ພາສາລາວ, Lingala, Luganda, lëtzebuergesch, македонски, Malagasy, മലയാളം, Malti, Maori, मराठी, Монгол, नेपाली, Sea, ଓଡିଆ, Afaan Oromoo, پښتو, Runasimi, संस्कृत, Gàidhlig na h-Alba, Sesotho, Shona, سنڌي, Soomaali, basa Sunda, kiswahili, тоҷикӣ, தமிழ், Татар, తెలుగు, ትግሪኛ, Tsonga, Türkmenler, Ride, اردو, ئۇيغۇر, o'zbek, isiXhosa, יידיש, Yoruba, Zulu, भोजपुरी, डोगरी, कोंकणी, Kurdî, Krio, मैथिली, Meiteilon, Mizo tawng, Sepedi, Ilocano, دری.
+- Website Owners & Businesses  
+- Developers & Web Agencies  
+- Digital Marketing & SEO Professionals  
+- Government & Public Sector Organizations  
+- Legal & Compliance Teams  
+- Advocacy & Accessibility-Focused Organizations  
+- E-commerce & SaaS Platforms
 
 ## Installation
 
 ### Prerequisites
-- Typo version 13*
+- Typo version 12*
 
 ### Steps
 
@@ -151,9 +107,9 @@ Must have installed your project used by composer.
 
 2. Then tell Composer to load the plugin:
 
-   composer require skynettechnologies/typo3-allinoneaccessibility
+   composer require skynettechnologies/typo3-skynetaccessibilityscanner
 
-3. In the Control Panel, go to Skynettechnologies → All in One Accessibility.
+3. In the Control Panel, go to Skynettechnologies → SkynetAccessibility Scanner.
 
 ## Using download zip
 
@@ -161,30 +117,20 @@ Must have installed your project used by composer.
 
 2. Then active the plugin:
 
-3. In the Control Panel, go to Skynettechnologies → All in One Accessibility.
+3. In the Control Panel, go to Skynettechnologies → SkynetAccessibility Scanner.
 
 ## Activation and Deactivation
 1. Navigate to **Extensions**.
-2. Locate *All in One Accessibility* in the list.
+2. Locate *SkynetAccessibility Scanner* in the list.
 3. Use the **Enable** or **Disable** toggle to activate or deactivate the extension as needed.
-
-
-## Live Demo
-https://typo3.skynettechnologies.us/
-
 
 ## CORS Policy Configuration
 
 To avoid CORS policy issues, ensure the following URLs are allowed in your website. These URLs should be added to your CORS configuration or trusted domains list.
 
-| **Domain**                         | **Description**                              | **Usage**                        |
-|------------------------------------|----------------------------------------------|----------------------------------|
-| `https://*.skynettechnologies.com` | Skynet Technologies (Global Domain)          | API access and resources         |
-| `https://*.skynettechnologies.us`  | Skynet Technologies (US Domain)              | API access and resources         |
-| `https://*.googleapis.com`         | Google APIs                                  | Services like Fonts, Translation |
-| `https://*.gstatic.com`            | Fonts APIs                                   | Custom Fonts                     |
-| `https://vlibras.gov.br`           | VLibras - Brazilian Sign Language Service    | Sign Language                    |
-
+| **Domain**                            | **Description**                                    | **Usage**                        |
+|---------------------------------------|----------------------------------------------------|----------------------------------|
+| `https://skynetaccessibilityscan.com` | Skynet Accessibility Scan (Global Domain)          | API access and resources         |
 
 ## Instructions
 
@@ -193,16 +139,15 @@ To avoid CORS policy issues, ensure the following URLs are allowed in your websi
 3. Verify the application functionality by testing requests to these domains.
 4. If issues persist, consult the documentation for CORS configuration guidance.
 
-## Configuration
+## Screenshots
 
-To configure the widget, access the Admin Panel and head to the **All in One Accessibility** menu in the dashboard. From there, you can register **[here](https://ada.skynettechnologies.us/trial-subscription)** with 10 Days free trial.
+![SkynetAccessibility_Scanner_Image_1](https://www.skynettechnologies.com/sites/default/files/SkynetAccessibilityScanner/SkynetAccessibility_Scanner_Image_1.jpg)  
+![SkynetAccessibility_Scanner_Image_2](https://www.skynettechnologies.com/sites/default/files/SkynetAccessibilityScanner/SkynetAccessibility_Scanner_Image_2.jpg)
+![SkynetAccessibility_Scanner_Image_3](https://www.skynettechnologies.com/sites/default/files/SkynetAccessibilityScanner/SkynetAccessibility_Scanner_Image_3.jpg)
 
+## Video
 
-## Documentation
-
-- [Purchase Typo3 All in One Accessibility](https://www.skynettechnologies.com/typo3-accessibility-extension)
-- [How to install All in One Accessibility Extension on Typo3](https://www.skynettechnologies.com/blog/accessibility-widget-installation-for-typo3-website)
-- [All in One Accessibility - Features Guide](https://www.skynettechnologies.com/sites/default/files/accessibility-widget-features-list.pdf)
+[![SkynetAccessibility Scanner](https://img.youtube.com/vi/xhLKR0FuKJc/0.jpg)](https://www.youtube.com/watch?v=xhLKR0FuKJc)
 
 ## Submit a Support Request
 
@@ -210,74 +155,21 @@ Please visit our **[support page](https://www.skynettechnologies.com/report-acce
 
 ## Send Us an Email
 
-Alternatively, you can send an email to our support team:
+Alternatively, you can send an email to our support team:  
 **[hello@skynettechnologies.com](mailto:hello@skynettechnologies.com)**
-
-## Accessibility Paid Add-on Services
-
-### **[Manual Accessibility Audit Report](https://www.skynettechnologies.com/all-in-one-accessibility/addons#manual-accessibility-audit-report)**
-
-Enhance inclusivity and user experience by evaluating your website’s accessibility by accessibility experts.
-WCAG 2.0 / WCAG 2.1 / WCAG 2.2 Level AA conformance testing
-Automated, semi-automated testing
-Manual testing
-Simple before-after UI/UX recommendations on how to fix the issues
-Comprehensive audit report
-
-### **[Manual Accessibility Remediation](https://www.skynettechnologies.com/all-in-one-accessibility/addons#manual-accessibility-remediation)**
-Enhance website accessibility and inclusivity with our Manual Accessibility Remediation add-on. This service includes fixing accessibility issues and thorough remediation of your website manually. Our experts ensure accessibility with WCAG standards, improve user experience for those with disabilities, and provide a detailed report on the improvements made.
-
-### **[PDF/Document Accessibility Remediation](https://www.skynettechnologies.com/all-in-one-accessibility/addons#pdf-document-remediation)**
-The PDF / Document Remediation provides a list of inaccessible PDFs and remediated PDFs from where you can request PDF remediation service.
- 
- ### **[VPAT Report/Accessibility Conformance Report(ACR)](https://www.skynettechnologies.com/all-in-one-accessibility/addons#vpat-acr-report)**
- The Voluntary Product Accessibility Template (VPAT), also known as an ACR (Accessibility Conformance Report) starts with an audit and provides current details for an accessible website, application, or any other digital assets.
-
-## Accessibility Widget Paid Add-ons
-
-### **[White Label](https://www.skynettechnologies.com/all-in-one-accessibility/addons#accessibility-widget-add-ons)**
-Remove the Skynet technologies logo as well as all of the footer links, popups, report a problem link and more for full white label control.
-
-### **[Live Site Translations](https://www.skynettechnologies.com/all-in-one-accessibility/addons#accessibility-widget-add-ons)**
-Translate your site into over 140 languages instantly to enhance accessibility for non-native speakers, individuals with language acquisition difficulties, and those with learning disabilities.
-
-###  **[Modify Accessibility Menu](https://www.skynettechnologies.com/all-in-one-accessibility/addons#accessibility-widget-add-ons)**
-Build and fine-tune your widget with the Modify Menu option. Reorder, remove and restructure the widget buttons to fit your users’ specific accessibility needs.
 
 ## Accessibility Partnership Opportunities
 
-### **[Agencies Partnership](https://www.skynettechnologies.com/agency-partners)**
+### **[Accessibility Agency Partnership](https://www.skynettechnologies.com/agency-partners)**
 
-Partner with us as an agency to provide comprehensive accessibility solutions to your clients. Get access to exclusive resources, training, and support to help you implement and manage accessibility features effectively.
+Partner with us as an agency to provide comprehensive accessibility solutions to your existing clients. Get access to exclusive resources, training, and support to help you implement and manage accessibility features effectively.
 
-### **[Affiliated Partnership](https://www.skynettechnologies.com/affiliate-partner)**
+### **[Accessibility Affiliate Partnership](https://www.skynettechnologies.com/affiliate-partner)**
 
-Join our affiliate program and earn commissions by promoting All in One Accessibility™. Share our Widget with your network and help businesses improve their website accessibility while generating revenue.
+Join our affiliate program and earn hefty commissions by promoting SkynetAccessibility Scanner. Share our accessibility solution within your network and help businesses improve their website accessibility while generating additional revenue.
 
-For more details, Please visit **[Partnership Opportunities Page](https://www.skynettechnologies.com/partner-program)**
-
-## Screenshots
-
-![App Screenshot](https://www.skynettechnologies.com/sites/default/files/screenshot-1-free.jpg?v=3)
-
-![App Screenshot](https://www.skynettechnologies.com/sites/default/files/screenshot-2-free.jpg?v=3)
-
-![App Screenshot](https://www.skynettechnologies.com/sites/default/files/screenshot-3-free.jpg?v=3)
-
-![App Screenshot](https://www.skynettechnologies.com/sites/default/files/screenshot-4-free.jpg?v=3)
-
-## Video
-
-[![All in One Accessibility](https://img.youtube.com/vi/X70XtvGyvSs/0.jpg)](https://www.youtube.com/watch?v=X70XtvGyvSs)
+For more details, please visit **[Accessibility Partnership Opportunities Page](https://www.skynettechnologies.com/partner-program)**.
 
 ## Credits
 
-This addon is developed and maintained by **[Skynet Technologies USA LLC](https://www.skynettechnologies.com)**
-
-## Current Maintainers
-
-- **[Skynet Technologies USA LLC](https://github.com/skynettechnologies)**
-
-## License
-
-[MIT](LICENSE) © Skynet Technologies USA LLC
+This **Accessibility Scanning Monitoring Application** is developed and maintained by **[Skynet Technologies USA LLC](https://www.skynettechnologies.com)**

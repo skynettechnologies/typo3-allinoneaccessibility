@@ -23,18 +23,18 @@ plugin {
 }
 
 # Module configuration
-module.tx_allinoneaccessibility_Sntg_allinoneaccessibilitytoolmodule {
+module.tx_skynetaccessibilityscanner_Sntg_skynetaccessibilityscannertoolmodule {
   view {
-    templateRootPaths.0 = EXT:allinoneaccessibility/Resources/Private/Backend/Templates/
-    partialRootPaths.0 = EXT:allinoneaccessibility/Resources/Private/Backend/Partials/
-    layoutRootPaths.0 = EXT:allinoneaccessibility/Resources/Private/Backend/Layouts/
+    templateRootPaths.0 = EXT:skynetaccessibilityscanner/Resources/Private/Backend/Templates/
+    partialRootPaths.0 = EXT:skynetaccessibilityscanner/Resources/Private/Backend/Partials/
+    layoutRootPaths.0 = EXT:skynetaccessibilityscanner/Resources/Private/Backend/Layouts/
   }
 }
 
 page {
   // Initiate all the css-together
   includeCSS {
-    30001 =  EXT:allinoneaccessibility/Resources/Public/Css/adawidget.css
+    30001 =  EXT:skynetaccessibilityscanner/Resources/Public/Css/adawidget.css
   }
 
 }
@@ -43,7 +43,7 @@ page.111246 = USER
 page.111246 {
   userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
   pluginName = Tool
-  extensionName = Allinoneaccessibility
+  extensionName = Skynetaccessibilityscanner
   controller = Tool
   vendorName = Skynettechnologies
   action = main

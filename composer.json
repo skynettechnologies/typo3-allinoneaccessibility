@@ -1,17 +1,17 @@
 {
-    "name": "skynettechnologies/typo3-allinoneaccessibility",
+    "name": "skynettechnologies/typo3-skynetaccessibilityscanner",
     "type": "typo3-cms-extension",
-    "description": "All in One Accessibility widget improves Typo3 website ADA compliance and browser experience for ADA, WCAG 2.1 & 2.2, Section 508, Australian DDA, European EAA EN 301 549, UK Equality Act (EA), Israeli Standard 5568, California Unruh, Ontario AODA, Canada ACA, German BITV, France RGAA, Brazilian Inclusion Law (LBI 13.146/2015), Spain UNE 139803:2012, JIS X 8341 (Japan), Italian Stanca Act and Switzerland DDA Standards.",
+    "description": "Scan, monitor, and identify website accessibility issues across WCAG 2.0, 2.1, 2.2, ADA, Section 508, EN 301 549, UK Equality Act, Australian DDA, and Canada ACA. Get simple issue highlights with recommended fixes.",
     "require": {
         "typo3/cms-core": "^12"
     },
     "autoload": {
         "psr-4": {
-            "Skynettechnologies\\Allinoneaccessibility\\": "Classes"
+            "Skynettechnologies\\Skynetaccessibilityscanner\\": "Classes"
         }
     },
     "replace": {
-        "typo3-ter/allinoneaccessibility": "self.version"
+        "typo3-ter/skynetaccessibilityscanner": "self.version"
     },
     "config": {
         "vendor-dir": ".Build/vendor/",
@@ -21,7 +21,7 @@
         "typo3/cms": {
             "cms-package-dir": "{$vendor-dir}/typo3/cms",
             "web-dir": ".Build/public",
-            "extension-key": "allinoneaccessibility"
+            "extension-key": "skynetaccessibilityscanner"
         }
     }
 }
