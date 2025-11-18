@@ -12,9 +12,9 @@ plugin.tx_typo3alloneaccessibility_tool {
 
 module.tx_allinoneaccessibility_Sntg_allinoneaccessibilitytoolmodule {
   view {
-    templateRootPath = EXT:typo3_allinoneaccessibility/Resources/Private/Backend/Templates/
-    partialRootPath = EXT:typo3_allinoneaccessibility/Resources/Private/Backend/Partials/
-    layoutRootPath = EXT:typo3_allinoneaccessibility/Resources/Private/Backend/Layouts/
+    templateRootPath = EXT:allinoneaccessibility/Resources/Private/Backend/Templates/
+    partialRootPath = EXT:allinoneaccessibility/Resources/Private/Backend/Partials/
+    layoutRootPath = EXT:allinoneaccessibility/Resources/Private/Backend/Layouts/
   }
 
 }

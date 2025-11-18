@@ -1,11 +1,11 @@
 plugin {
   tx_typo3alloneaccessibility_tool {
     view {
-      templateRootPaths.0 = EXT:typo3_allinoneaccessibility/Resources/Private/Templates/
+      templateRootPaths.0 = EXT:alloneaccessibility/Resources/Private/Templates/
       //templateRootPaths.1 = {$plugin.tx_typo3alloneaccessibility_tool.view.templateRootPath}
-      partialRootPaths.0 = EXT:typo3_allinoneaccessibility/Resources/Private/Partials/
+      partialRootPaths.0 = EXT:alloneaccessibility/Resources/Private/Partials/
       //partialRootPaths.1 = {$plugin.tx_typo3alloneaccessibility_tool.view.partialRootPath}
-      layoutRootPaths.0 = EXT:typo3_allinoneaccessibility/Resources/Private/Layouts/
+      layoutRootPaths.0 = EXT:alloneaccessibility/Resources/Private/Layouts/
       //layoutRootPaths.1 = {$plugin.tx_typo3alloneaccessibility_tool.view.layoutRootPath}
     }
 
@@ -25,16 +25,16 @@ plugin {
 # Module configuration
 module.tx_allinoneaccessibility_Sntg_allinoneaccessibilitytoolmodule {
   view {
-    templateRootPaths.0 = EXT:typo3_allinoneaccessibility/Resources/Private/Backend/Templates/
-    partialRootPaths.0 = EXT:typo3_allinoneaccessibility/Resources/Private/Backend/Partials/
-    layoutRootPaths.0 = EXT:typo3_allinoneaccessibility/Resources/Private/Backend/Layouts/
+    templateRootPaths.0 = EXT:allinoneaccessibility/Resources/Private/Backend/Templates/
+    partialRootPaths.0 = EXT:allinoneaccessibility/Resources/Private/Backend/Partials/
+    layoutRootPaths.0 = EXT:allinoneaccessibility/Resources/Private/Backend/Layouts/
   }
 }
 
 page {
   // Initiate all the css-together
   includeCSS {
-    30001 =  EXT:typo3_allinoneaccessibility/Resources/Public/Css/adawidget.css
+    30001 =  EXT:allinoneaccessibility/Resources/Public/Css/adawidget.css
   }
 
 }

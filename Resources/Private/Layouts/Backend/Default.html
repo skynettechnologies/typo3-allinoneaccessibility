@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      data-namespace-typo3-fluid="true">
-<head>
-    <title>All in One Accessibility</title>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <link rel="stylesheet" type="text/css" href="{f:uri.resource(path:'Vendor/bootstrap4.3.1.min.css', extensionName: 'allinoneaccessibility')}" media="all">
 
-    <link rel="stylesheet" type="text/css" href="{f:uri.resource(path: 'Vendor/bootstrap4.3.1.min.css', extensionName: 'typo3_allinoneaccessibility')}" media="all" />
-    <link rel="stylesheet" type="text/css" href="{f:uri.resource(path: 'Css/main.css', extensionName: 'typo3_allinoneaccessibility')}" media="all" />
-
+  
+    <link rel="stylesheet" type="text/css" href="{f:uri.resource(path:'Css/main.css', extensionName: 'allinoneaccessibility')}" media="all">
+  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="{f:uri.resource(path: 'JavaScript/custom.js', extensionName: 'typo3_allinoneaccessibility')}" defer></script>
-</head>
-<body class="typo3-module">
+
+    <script type="text/javascript" src="{f:uri.resource(path:'JavaScript/custom.js', extensionName: 'allinoneaccessibility')}"></script>
 
     <div class="typo3-fullDoc">
-        <div class="module">
-            <f:render section="content" />
-        </div>
+        <f:render section="content" />
     </div>
-
-</body>
 </html>
