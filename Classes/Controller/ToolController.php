@@ -96,24 +96,86 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     {
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('be_users');
 
-$query = $queryBuilder
-    ->select('*')
-    ->from('be_users');
+        $query = $queryBuilder
+            ->select('*')
+            ->from('be_users');
 
-$result = $query->execute()->fetchAll();
-foreach($result as $row){
-   
-}
+        $result = $query->execute()->fetchAll();
+        foreach($result as $row){
+        
+        }
 
 
         $this->view->assign('action', 'chatSettings');
         $this->view->assign('constant', $this->constants);
-        
-       
+        // EU script value fetch
+
+        session_start();
+
+        /* -------------------------------------------
+        GET VISITOR DATA (SESSION LIKE JS)
+        ----------------------------------------------*/
+
+        if (!empty($_SESSION['visitor_data'])) {
+
+            // Fetch from session
+            $visitorData = $_SESSION['visitor_data'];
+            error_log('[AIOA] Visitor data fetched from SESSION');
+
+        } else {
+
+            error_log('[AIOA] Visitor data NOT found in session. Calling ipapi.');
+
+            $apiUrl = "https://ipapi.co/json/";
+
+            $ch = curl_init($apiUrl);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+
+            $response = curl_exec($ch);
+            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            curl_close($ch);
+
+            if ($httpCode === 200 && $response) {
+
+                $data = json_decode($response, true);
+
+                $visitorData = [
+                    'country_code' => $data['country_code'] ?? 'Unknown',
+                    'in_eu'        => $data['in_eu'] ?? false
+                ];
+
+            } else {
+
+                // Fallback
+                $visitorData = [
+                    'country_code' => 'Unknown',
+                    'in_eu'        => false
+                ];
+            }
+
+            // Save to session
+            $_SESSION['visitor_data'] = $visitorData;
+        }
+
+        /* -------------------------------------------
+        EU LOGIC (ONLY VALUE YOU NEED)
+        ----------------------------------------------*/
+
+        $inEU = $visitorData['in_eu'] ?? false;
+
+        /**
+         * SAME AS JS:
+         * in_eu = true  → is_eu = 0
+         * in_eu = false → is_eu = 1
+         */
+        $is_eu = $inEU ? 0 : 1;
+            
         $user_name = $row['username'];
         $user_email = $row['email'];
         
-      
+        $this->view->assign('is_eu', $is_eu);
         $this->view->assign('username', $user_name);
         $this->view->assign('useremail', $user_email);
        
