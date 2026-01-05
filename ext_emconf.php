@@ -10,10 +10,10 @@ $EM_CONF['allinoneaccessibility'] = [
     'state' => 'stable',
     'uploadfolder' => 0,
     'createDirs' => '',
-    'version' => '13.0.4',
+    'version' => '14.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '13.0.0-13.9.99',
+            'typo3' => '14.0.0-14.9.99',
         ],
         'conflicts' => [],
         'suggests' => [],
