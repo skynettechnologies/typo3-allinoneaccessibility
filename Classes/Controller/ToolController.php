@@ -45,7 +45,7 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
     /**
      * @var TypoScriptTemplateModuleController
-     */
+    */
     protected $pObj;
 
     protected $contentObject = null;
@@ -56,7 +56,7 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * Initializes this object
      *
      * @return void
-     */
+    */
     public function initializeObject()
     {
         $this->contentObject = GeneralUtility::makeInstance('TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer');
@@ -118,7 +118,72 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     
         $user_name = $result[0]['username'] ?? '';
         $user_email = $result[0]['email'] ?? '';
-    
+        //Eu Logic Start
+        // EU script value fetch
+
+        session_start();
+
+        /* -------------------------------------------
+        GET VISITOR DATA (SESSION LIKE JS)
+        ----------------------------------------------*/
+
+        if (!empty($_SESSION['visitor_data'])) {
+
+            // Fetch from session
+            $visitorData = $_SESSION['visitor_data'];
+            error_log('[AIOA] Visitor data fetched from SESSION');
+
+        } else {
+
+            error_log('[AIOA] Visitor data NOT found in session. Calling ipapi.');
+
+            $apiUrl = "https://ipapi.co/json/";
+
+            $ch = curl_init($apiUrl);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+
+            $response = curl_exec($ch);
+            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            curl_close($ch);
+
+            if ($httpCode === 200 && $response) {
+
+                $data = json_decode($response, true);
+
+                $visitorData = [
+                    'country_code' => $data['country_code'] ?? 'Unknown',
+                    'in_eu'        => $data['in_eu'] ?? false
+                ];
+
+            } else {
+
+                // Fallback
+                $visitorData = [
+                    'country_code' => 'Unknown',
+                    'in_eu'        => false
+                ];
+            }
+
+            // Save to session
+            $_SESSION['visitor_data'] = $visitorData;
+        }
+
+        /* -------------------------------------------
+        EU LOGIC (ONLY VALUE YOU NEED)
+        ----------------------------------------------*/
+
+        $inEU = $visitorData['in_eu'] ?? false;
+
+        /**
+         * SAME AS JS:
+         * in_eu = true  → is_eu = 0
+         * in_eu = false → is_eu = 1
+         */
+        $is_eu = $inEU ? 0 : 1;
+
+        //End Eu logic
         // Assign variables to the view
         $this->view->assignMultiple([
             'action' => 'chatSettings',
@@ -126,6 +191,7 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
             'username' => $user_name,
             'useremail' => $user_email,
             'domain' => $domain,
+            'is_eu' => $is_eu,
         ]);
     
         return $this->htmlResponse();
