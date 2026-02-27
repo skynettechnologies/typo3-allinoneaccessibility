@@ -24,8 +24,8 @@ class AwesomeMiddleware implements MiddlewareInterface
                 
                 $domain_base64 = base64_encode($domain);
 
-                $apiUrl = "https://ada.skynettechnologies.us/api/add-user-domain";
-                $postData = ['website' => $domain_base64];
+                $apiUrl = "https://ada.skynettechnologies.us/api/widget-settings";
+                $postData = ['website_url' => $domain];
 
                 $ch = curl_init($apiUrl);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -50,7 +50,11 @@ class AwesomeMiddleware implements MiddlewareInterface
                     console.log('ADA no_required_eu:', '{$no_required_eu}');
                 </script>
                 ";
-
+                 $color      = !empty($color) ? $color : '#420083';
+                $position   = !empty($position) ? $position : 'bottom_right';
+                $icon_type  = !empty($icon_type) ? $icon_type : 'aioa-icon-type-1';
+                $icon_size  = !empty($icon_size) ? $icon_size : 'aioa-small-icon';
+                $licensekey = !empty($licensekey) ? $licensekey : '';
                 if ($no_required_eu == '0') {
 
                     // EU SCRIPT (with delay)
