@@ -121,67 +121,65 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         //Eu Logic Start
         // EU script value fetch
 
-        session_start();
 
-        /* -------------------------------------------
-        GET VISITOR DATA (SESSION LIKE JS)
-        ----------------------------------------------*/
 
-        if (!empty($_SESSION['visitor_data'])) {
 
-            // Fetch from session
-            $visitorData = $_SESSION['visitor_data'];
-            error_log('[AIOA] Visitor data fetched from SESSION');
+    // ---------- FIRST API (ipapi) ----------
+    $apiUrl1 = "https://ipapi.co/json/";
 
-        } else {
+    $ch = curl_init($apiUrl1);
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_SSL_VERIFYPEER => false,
+        CURLOPT_TIMEOUT => 5,
+    ]);
 
-            error_log('[AIOA] Visitor data NOT found in session. Calling ipapi.');
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
 
-            $apiUrl = "https://ipapi.co/json/";
+    $data = json_decode($response, true);
 
-            $ch = curl_init($apiUrl);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-            curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+    // Check if valid response
+    if ($httpCode === 200 && !empty($data) && isset($data['in_eu'])) {
+        $isEU = $data['in_eu'] ? 1 : 0;
+        
+    } else {
 
-            $response = curl_exec($ch);
-            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-            curl_close($ch);
+        // ---------- SECOND API (ipwho) ----------
+        $ip = $_SERVER['REMOTE_ADDR'];
 
-            if ($httpCode === 200 && $response) {
-
-                $data = json_decode($response, true);
-
-                $visitorData = [
-                    'country_code' => $data['country_code'] ?? 'Unknown',
-                    'in_eu'        => $data['in_eu'] ?? false
-                ];
-
-            } else {
-
-                // Fallback
-                $visitorData = [
-                    'country_code' => 'Unknown',
-                    'in_eu'        => false
-                ];
-            }
-
-            // Save to session
-            $_SESSION['visitor_data'] = $visitorData;
+        // Handle proxy / VPN / Cloudflare
+        if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            $ip = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR'])[0];
         }
 
-        /* -------------------------------------------
-        EU LOGIC (ONLY VALUE YOU NEED)
-        ----------------------------------------------*/
+        $apiUrl2 = "https://ipwho.is/" . trim($ip);
 
-        $inEU = $visitorData['in_eu'] ?? false;
+        $ch = curl_init($apiUrl2);
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_TIMEOUT => 5,
+        ]);
 
-        /**
-         * SAME AS JS:
-         * in_eu = true  → is_eu = 0
-         * in_eu = false → is_eu = 1
-         */
-        $is_eu = $inEU ? 0 : 1;
+        $response = curl_exec($ch);
+        curl_close($ch);
+
+        $data = json_decode($response, true);
+
+        if (!empty($data) && isset($data['is_eu'])) {
+            $isEU = $data['is_eu'] ? 1 : 0;
+        } else {
+            // Default fallback (if both APIs fail)
+            $isEU = 0;
+        }
+    }
+
+    // Your final logic
+    $iseu = $isEU ? 0 : 1;
+
+
 
         //End Eu logic
         // Assign variables to the view
@@ -191,7 +189,7 @@ class ToolController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
             'username' => $user_name,
             'useremail' => $user_email,
             'domain' => $domain,
-            'is_eu' => $is_eu,
+            'is_eu' => $iseu,
         ]);
     
         return $this->htmlResponse();

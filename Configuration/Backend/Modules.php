@@ -11,8 +11,8 @@ return [
     'Sntg_AllinoneaccessibilityToolmodule' => [
         'parent' => 'Sntg_module',
         'position' => ['before' => 'top'],
-        'access' => 'admin,user,group',
-        'path' => '/module/Skynettechnologies/AllinoneaccessibilityToolmodule',
+        'access' => 'admin',
+        'path' => '/module/allinoneaccessibility/AllinoneaccessibilityToolmodule',
         'icon'   => 'EXT:allinoneaccessibility/Resources/Public/Icons/whats_app.svg',
         'labels' => 'LLL:EXT:allinoneaccessibility/Resources/Private/Language/locallang_whastappmodule.xlf',
         'navigationComponent' => '@typo3/backend/page-tree/page-tree-element',

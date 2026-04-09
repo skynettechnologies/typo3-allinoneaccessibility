@@ -38,7 +38,7 @@ class AwesomeMiddleware implements MiddlewareInterface
                 $apiResponse = json_decode($responseApi, true);
 
                 // 0 = load EU script | 1 = load normal AIO script
-                $no_required_eu = $apiResponse['website_data']['no_required_eu'] ?? '1';
+                $no_required_eu = $apiResponse['Data']['no_required_eu'] ?? '1';
 
                 /* -------------------------------------------
                 BUILD SCRIPT BASED ON EU FLAG
